@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { Route, Switch} from 'react-router-dom'
+import Edit from './screens/EditScreen'
 import './App.css'
 import HomeScreen from './screens/HomeScreen'
 
@@ -48,7 +49,10 @@ function App() {
           loading ? 'Loading document...' : 'Download now!'
         }
       </PDFDownloadLink> */}
-      <HomeScreen></HomeScreen>
+      <Switch>
+      <Route exact path='/' component={HomeScreen}></Route>
+      <Route  path='/edit' component={Edit}></Route>
+      </Switch>
     </div>
   )
 }

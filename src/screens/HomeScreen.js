@@ -25,10 +25,11 @@ const HomeScreen = () => {
               <img src={A}></img>
 
               <p className="Template_Type">
-                Basic<span className="Rating"> 4.5 stars</span>
+                Basic<span style={{marginLeft:"10px"}} className="Rating"> 4.5 <i style={{color:"yellow"}} className="fas fa-star"></i></span>
               </p>
               <p className="About_Template">
                 Easily personalize this basic resume layout that can be
+                completed in under ten minutes by intuitive process. Easily personalize this basic resume layout that can be
                 completed in under ten minutes by intuitive process.
               </p>
               <div className="Template_btn">Select Template</div>
@@ -38,10 +39,41 @@ const HomeScreen = () => {
               <img src={A}></img>
 
               <p className="Template_Type">
-                Basic<span className="Rating"> 4.5 stars</span>
+                Basic<span style={{marginLeft:"10px"}} className="Rating"> 4.5 <i style={{color:"yellow"}} className="fas fa-star"></i></span>
               </p>
               <p className="About_Template">
                 Easily personalize this basic resume layout that can be
+                completed in under ten minutes by intuitive process. Easily personalize this basic resume layout that can be
+                completed in under ten minutes by intuitive process.
+              </p>
+              <div className="Template_btn">Select Template</div>
+            </div>
+
+
+            <div className="Template_Card">
+              <img src={A}></img>
+
+              <p className="Template_Type">
+                Basic<span style={{marginLeft:"10px"}} className="Rating"> 4.5 <i style={{color:"yellow"}} className="fas fa-star"></i></span>
+              </p>
+              <p className="About_Template">
+                Easily personalize this basic resume layout that can be
+                completed in under ten minutes by intuitive process. Easily personalize this basic resume layout that can be
+                completed in under ten minutes by intuitive process.
+              </p>
+              <div className="Template_btn">Select Template</div>
+            </div>
+
+
+            <div className="Template_Card">
+              <img src={A}></img>
+
+              <p className="Template_Type">
+                Basic<span style={{marginLeft:"10px"}} className="Rating"> 4.5 <i style={{color:"yellow"}} className="fas fa-star"></i></span>
+              </p>
+              <p className="About_Template">
+                Easily personalize this basic resume layout that can be
+                completed in under ten minutes by intuitive process. Easily personalize this basic resume layout that can be
                 completed in under ten minutes by intuitive process.
               </p>
               <div className="Template_btn">Select Template</div>
@@ -51,28 +83,22 @@ const HomeScreen = () => {
               <img src={A}></img>
 
               <p className="Template_Type">
-                Basic<span className="Rating"> 4.5 stars</span>
+                Basic<span style={{marginLeft:"10px"}} className="Rating"> 4.5 <i style={{color:"yellow"}} className="fas fa-star"></i></span>
               </p>
               <p className="About_Template">
                 Easily personalize this basic resume layout that can be
+                completed in under ten minutes by intuitive process. Easily personalize this basic resume layout that can be
                 completed in under ten minutes by intuitive process.
               </p>
               <div className="Template_btn">Select Template</div>
             </div>
 
-            <div className="Template_Card">
-              <img src={A}></img>
-
-              <p className="Template_Type">
-                Basic<span className="Rating"> 4.5 stars</span>
-              </p>
-              <p className="About_Template">
-                Easily personalize this basic resume layout that can be
-                completed in under ten minutes by intuitive process.
-              </p>
-              <div className="Template_btn">Select Template</div>
-            </div>
+            
           </ScrollContainer>
+        </div>
+        <div className="Swipe_Arrow_Mob">
+          Swipe for Templates
+          <i style={{ marginLeft: '5px' }} className="fas fa-arrow-right"></i>
         </div>
       </div>
     </div>

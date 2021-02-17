@@ -58,7 +58,7 @@
   width: 380px;
   height: 500px;
   position: relative;
-
+  
   margin-left: 50px;
   /* background-color: tomato; */
 }
@@ -70,7 +70,7 @@
 
 .Template_Type {
   position: absolute;
-  bottom: 100px;
+  bottom: 140px;
   left: 40px;
   font-weight: 500;
   color: white;
@@ -86,7 +86,8 @@
   font-size: 12px;
   margin-top: 10px;
   position: absolute;
-  bottom: 60px;
+  bottom: 70px;
+  width: 300px;
   left: 40px;
   color: white;
 }
@@ -110,7 +111,144 @@
   color: black;
 }
 
+.Swipe_Arrow_Mob{
+  display: none;
+}
+
 
 @media only screen and (max-width: 414px) {
+
+  .HomeScreen {
+    height: 100vh;
+    display: inline-block;
+    
+  }
+
+  .Intro {
+    margin-top: 60px;
+    width: 360px;
+    margin-left: 10px;
+  }
+  
+  .Main_P {
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .Sub_P {
+    font-size: 25px;
+    font-size: 400;
+    color: #afafaf;
+    margin-top: 10px;
+  }
+  
+  .Swipe_Arrow {
+    display: none;/* width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.13);
+    color: white;
+    font-weight: 500;
+    margin-top: 50px; */
+  }
+  
+  .Templates_Container {
+    margin-top: 60px;
+  }
+  
+  /* .Scrolling_Templates{
+      
+      /* overflow: hidden;
+      white-space: nowrap;
+      margin-top: 30px;
+      width: 800px; */
+  
+  .Scrolling {
+    width: 380px;
+    
+  }
+  .Scrolling_Templates {
+    overflow: auto;
+    height: 560px;
+    display: flex;
+    
+  }
+  
+  .Template_Card {
+    width: 380px;
+    height: 500px;
+    position: relative;
+    
+    margin-left: 0px;
+    margin-right: 20px;
+    /* background-color: tomato; */
+  }
+  
+  .Template_Card img {
+    width: 380px;
+    height: 500px;
+  }
+  
+  .Template_Type {
+    position: absolute;
+    bottom: 140px;
+    left: 40px;
+    font-weight: 500;
+    color: white;
+    font-size: 20px;
+  }
+  .Rating {
+    font-size: 14px;
+  
+    font-weight: 400;
+  }
+  
+  .About_Template {
+    font-size: 12px;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 70px;
+    left: 40px;
+    color: white;
+  }
+  
+  .Template_btn {
+    position: absolute;
+    width: 140px;
+    height: 35px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+  
+    font-weight: 500;
+    bottom: 0px;
+    left: 120px;
+    top: 480px;
+  
+    font-size: 14px;
+    color: black;
+  }
+
+  .Swipe_Arrow_Mob{
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    /* background-color: rgba(255, 255, 255, 0.13); */
+    color: rgba(255, 255, 255, 0.664);
+    font-weight: 500;
+    margin-top: 0px;
+    font-weight: 300;
+    
+  }
     
 }

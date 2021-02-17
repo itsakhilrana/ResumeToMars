@@ -8,8 +8,24 @@
   background-color: #202327;
   padding: 20px 40px;
   font-family: Roboto;
+ 
 }
 
 .Web_Name{
   color: white;
+}
+
+@media only screen and (max-width: 414px) {
+  .App{
+    background-color: #202327;
+    padding: 20px 10px;
+    font-family: Roboto;
+    width: 100%;
+   height: 1050px;
+  }
+
+  .Web_Name{
+    color: white;
+    margin-left: 10px;
+  }
 }
