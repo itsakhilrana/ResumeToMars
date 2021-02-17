@@ -1,25 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+
+import './App.css'
+import HomeScreen from './screens/HomeScreen'
+
+import {
+  PDFDownloadLink,
+  Page,
+  Text,
+  View,
+  Document,
+  StyleSheet,
+} from '@react-pdf/renderer'
+
+const styles = StyleSheet.create({
+  page: {
+    flexDirection: 'row',
+    backgroundColor: '#E4E4E4',
+  },
+  section: {
+    margin: 10,
+    padding: 10,
+    flexGrow: 1,
+   
+  },
+})
+
+const MyDoc = () => (
+  <Document>
+    <Page size="A4" style={styles.page}>
+      <View style={styles.section}>
+        <Text>Section #1</Text>
+        <Text>sdsfsdfdf</Text>
+      </View>
+      <View style={styles.section}>
+        <Text>Section #2</Text>
+      </View>
+    </Page>
+  </Document>
+)
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p className="Web_Name">ResumeToMars</p>
+      {/* <PDFDownloadLink document={<MyDoc />} fileName="somename.pdf">
+        {({ blob, url, loading, error }) =>
+          loading ? 'Loading document...' : 'Download now!'
+        }
+      </PDFDownloadLink> */}
+      <HomeScreen></HomeScreen>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
