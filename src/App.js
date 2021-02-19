@@ -11,12 +11,40 @@ import {
   View,
   Document,
   StyleSheet,
+  Font
 } from '@react-pdf/renderer'
+
+
+Font.register({
+  family: "Roboto light",
+  src:
+    "https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-light-webfont.ttf"
+});
+
+Font.register({
+  family: "Roboto regular",
+  src:
+    "https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-regular-webfont.ttf"
+});
+
+Font.register({
+  family: "Roboto medium",
+  src:
+    "https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-medium-webfont.ttf"
+});
+
+Font.register({
+  family: "Roboto bold",
+  src:
+    "https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-bold-webfont.ttf"
+});
+
 
 const styles = StyleSheet.create({
   page: {
     flexDirection: 'row',
     backgroundColor: '#E4E4E4',
+    color:'#202327'
   },
   section: {
     margin: 10,
@@ -25,6 +53,8 @@ const styles = StyleSheet.create({
    
   },
 })
+
+
 
 const MyDoc = () => (
   <Document>
