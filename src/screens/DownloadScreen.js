@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import Body from '../components/Body'
 import { useSelector, useDispatch, Provider } from 'react-redux'
 import store from '../store'
+import './DownloadScreen.css'
 import {
   PDFDownloadLink,
   Page,
@@ -38,18 +39,25 @@ const MyDoc = () => (
 
 const DownloadScreen = () => {
   return (
-    <div>
-      {/* <PDFViewer style={styles.pdfViewer}>
-        <MyDoc name={name}></MyDoc>
-      </PDFViewer> */}
-
-      <PDFDownloadLink document={<MyDoc />} fileName="somename.pdf">
+    <div className="DownloadScreen">
+      <div className="Download_Info">
+        <p>Hurry! You're on Mars!</p>
+      <PDFDownloadLink style={{textDecoration:'none'}} document={<MyDoc />} fileName="ResumeToMars.pdf">
         {({ blob, url, loading, error }) =>
-          loading ? 'Loading document...' : 'Download now!'
+          loading ? <p style={{color:"white",fontSize:"16px"}}>Loading Please Wait...</p> : <div className="download_btn">Download</div>
         }
       </PDFDownloadLink>
+      </div>
+      
+
+      
     </div>
   )
 }
 
 export default DownloadScreen
+
+
+{/* <PDFViewer style={styles.pdfViewer}>
+        <MyDoc></MyDoc>
+      </PDFViewer> */}

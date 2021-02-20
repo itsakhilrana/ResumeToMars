@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text, View, StyleSheet } from '@react-pdf/renderer'
+import {useSelector} from 'react-redux'
 
 const styles = StyleSheet.create({
   blocks: {
@@ -41,20 +42,24 @@ const styles = StyleSheet.create({
   },
 })
 const Training = () => {
+
+  const trainingDetails = localStorage.getItem('trainingDetails')
+    ? JSON.parse(localStorage.getItem('trainingDetails'))
+    : {}
+  const {company, jobtitle, startDate, endDate, about} = trainingDetails
+
   return (
     <View style={styles.blocks}>
       <Text style={styles.trainingBlock}>TRAININGS</Text>
       <View style={styles.educationColumn}>
         <View style={styles.educationDetails}>
-          <Text style={styles.trainging}>Core Java </Text>
+          <Text style={styles.trainging}>{jobtitle} </Text>
           <Text style={styles.company}>
-            A & H Software Solutions CHD, Chandigarh
+            {company}
           </Text>
-          <Text style={styles.date}>(Jun 2019 - Jul 2019)</Text>
+          <Text style={styles.date}>{`(${startDate} - ${endDate})`}</Text>
           <Text style={styles.experience}>
-            During this training, I learned Java programming language from
-            scratch. It was a nice experience for me as, I am passionate and
-            curious to learn new things.
+            {about}
           </Text>
         </View>
       </View>

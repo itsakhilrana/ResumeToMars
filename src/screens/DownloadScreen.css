@@ -1,0 +1,56 @@
+.DownloadScreen{
+    height: 580px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.Download_Info p{
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+   
+    
+}
+
+.download_btn{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    
+}
+
+@media only screen and (max-width: 414px) {
+
+    .DownloadScreen{
+        height: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 10px;
+    }
+    
+    .Download_Info p{
+        font-size: 50px;
+        font-weight: 700;
+        color: white;
+       
+        
+    }
+    
+    .download_btn{
+        width: 150px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        color: black;
+    }    
+    
+  }

@@ -1,12 +1,40 @@
 .ProjectScreen{
-    height: 100vh;
+    height: 580px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.Project_Info{
-    font-size: 30px;
+.Project_Info {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+.Project_Info p{
+    font-size: 50px;
     font-weight: 700;
     color: white;
+    margin-right: 100px;
+    width: 200px;
 }
+
+
+@media only screen and (max-width: 414px) {
+    .ProjectScreen {
+      padding-top: 0px;
+      height: 700px;
+      padding-top: 60px;
+    }
+  
+    .Project_Info {
+      display: inline-block;
+    }
+  
+    .Project_Info p {
+      font-size: 50px;
+      font-weight: 700;
+      color: white;
+      width: 200px;
+      margin-right: 100px;
+    }
+  }

@@ -3,21 +3,32 @@ import {Link} from 'react-router-dom'
 import ScrollContainer from 'react-indiana-drag-scroll'
 import './HomeScreen.css'
 import A from '../imgs/A4F.svg'
+import fly from '../imgs/fly.svg'
+import mars from '../imgs/combo.svg'
+import MobileCombo from '../imgs/MobileCombo.svg'
 
 const HomeScreen = () => {
   return (
     <div className="HomeScreen">
       <div className="Intro">
+      
         <div className="Punch">
-          <p className="Main_P">
-            Create <br></br> your professional <br></br> resume in 15 minutes.
+          
+          <p className="Desktop_P">
+            Create your professional resume in 15 minutes.
+          </p>
+          <img className="Mobile_Combo" src={MobileCombo} height="500" width="350"></img>
+          <p className="Mobile_P">
+          Create <br></br> your professional <br></br> resume in 15 minutes.
           </p>
           <p className="Sub_P">Proven resume templates.</p>
-        </div>
-        <div className="Swipe_Arrow">
+          <div className="Swipe_Arrow">
           Swipe for Templates
           <i style={{ marginLeft: '5px' }} className="fas fa-arrow-right"></i>
         </div>
+        <img className="Combo" src={mars} height="350" width="250"></img>
+        </div>
+        
       </div>
       <div className="Templates_Container">
         <div className="Scrolling">

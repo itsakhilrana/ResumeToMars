@@ -8,7 +8,7 @@ const Trainings = ({ history }) => {
 
   const [startDate, setstartDate] = useState('')
   const [endDate, setendDate] = useState('')
-
+  const [about,setAbout] = useState('')
   const dispatch = useDispatch()
 
   const details = {
@@ -16,6 +16,7 @@ const Trainings = ({ history }) => {
     jobtitle,
     startDate,
     endDate,
+    about
   }
 
   useEffect(()=>{
@@ -28,6 +29,7 @@ const Trainings = ({ history }) => {
     setJobTitle(trainingDetails.jobtitle)
     setstartDate(trainingDetails.startDate)
     setendDate(trainingDetails.endDate)
+    setAbout(trainingDetails.about)
 
   }, [])
   
@@ -47,7 +49,7 @@ const Trainings = ({ history }) => {
   return (
     <div className="TrainingScreen">
       <div className="Training_Info">
-        <p>Trainings Experience</p>
+        <p>Training Experience</p>
 
         <form className="Form" onSubmit={submitHandler}>
           <input
@@ -78,9 +80,19 @@ const Trainings = ({ history }) => {
             onChange={(e) => setendDate(e.target.value)}
           ></input>
           <br></br>
+          <input
+            type="text"
+            value={about}
+            placeholder="Learning Experience"
+            onChange={(e) => setAbout(e.target.value)}
+          ></input>
+          <br></br>
 
-          <button type="submit">Next to skills & projects details</button><br></br>
-          <button onClick={previousHandler}>Back to Personal Info</button>
+          <div className="btn_div">
+            <button onClick={previousHandler}>Previous</button>
+            <button type="submit">Next</button>
+            
+          </div>
         </form>
       </div>
     </div>

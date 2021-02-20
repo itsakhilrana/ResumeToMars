@@ -1,12 +1,40 @@
 .TrainingScreen{
-    height: 100vh;
+    height: 580px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.Training_Info {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
 .Training_Info p{
-    font-size: 30px;
+    font-size: 50px;
     font-weight: 700;
     color: white;
+    margin-right: 100px;
+    width: 200px;
 }
+
+
+@media only screen and (max-width: 414px) {
+    .TrainingScreen {
+      padding-top: 0px;
+      height: 700px;
+      padding-top: 60px;
+    }
+  
+    .Training_Info {
+      display: inline-block;
+    }
+  
+    .Training_Info p {
+      font-size: 50px;
+      font-weight: 700;
+      color: white;
+      width: 200px;
+      margin-right: 100px;
+    }
+  }

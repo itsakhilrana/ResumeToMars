@@ -27,21 +27,22 @@ const styles = StyleSheet.create({
     width: '280px',
     marginRight: '50px',
   },
-
+  name_Container: {
+    flexDirection: 'row',
+  },
   userName: {
     fontSize: 20,
     fontFamily: 'Roboto regular',
-  },
-  userProfession: {
-    fontSize: 12,
-    fontWeight: 700,
-  },
-  line: {
     borderBottomWidth: 4,
     borderBottomColor: 'white',
     borderBottomStyle: 'solid',
     marginTop: 5,
-    width: 100,
+  },
+  userProfession: {
+    fontSize: 12,
+    fontWeight: 700,
+    marginLeft: '10px',
+    marginTop: '13px',
   },
   userPunch: {
     fontSize: 12,
@@ -49,36 +50,36 @@ const styles = StyleSheet.create({
   },
   linkColumn: {
     flexDirection: 'column',
-    marginLeft: '80px',
+    marginLeft: '100px',
+    alignItems:"flex-end"
   },
   links: {
     fontSize: 10,
+    
   },
 })
 
 const Header = () => {
-
-  const resume = useSelector(state => state.resume)
-  const {name,email,about} = resume.personalDetails
-
+  const personalDetails = localStorage.getItem('personalDetails')
+    ? JSON.parse(localStorage.getItem('personalDetails'))
+    : {}
+  const { name, email, about, phoneNo, profession } = personalDetails
 
   return (
     <View style={styles.header}>
       <View style={styles.header_Container}>
         <View style={styles.infoColumn}>
-          <Text style={styles.userName}>
-            {name}<Text style={styles.userProfession}>Developer & Designer</Text>
-          </Text>
-          <View style={styles.line}></View>
-          <Text style={styles.userPunch}>
-            Everything I do, I choose to do with respect. I believe in the
-            creation as it make our lives better, easier and more fun.
-          </Text>
+          <View style={styles.name_Container}>
+            <Text style={styles.userName}>{name}Akhil Rana</Text>
+            <Text style={styles.userProfession}>{profession}</Text>
+          </View>
+
+          <Text style={styles.userPunch}>{about}</Text>
         </View>
         <View style={styles.linkColumn}>
-          <Text style={styles.links}>example@.com</Text>
-          <Text style={styles.links}>xyzfrom1to0.com</Text>
-          <Text style={styles.links}>linkdedIn.com</Text>
+          <Text style={styles.links}>{email}</Text>
+          <Text style={styles.links}>+91 {" "}{phoneNo}</Text>
+          {/* <Text style={styles.links}>linkdedIn.com</Text> */}
         </View>
       </View>
     </View>

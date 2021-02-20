@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Text, View, StyleSheet } from '@react-pdf/renderer'
+import {useSelector} from 'react-redux'
 
 const styles = StyleSheet.create({
     blocks: {
@@ -39,27 +40,21 @@ const styles = StyleSheet.create({
   })
 
 const Projects = () => {
-    return (
+
+  const projectDetails = localStorage.getItem('projectDetails')
+    ? JSON.parse(localStorage.getItem('projectDetails'))
+    : {}
+  const {projectName,projectDescription,projectLink} = projectDetails  
+  
+  return (
         <View style={styles.blocks}>
       <Text style={styles.projectBlock}>PROJECTS</Text>
       <View style={styles.projectColumn}>
         <View style={styles.projectDetails}>
-          <Text style={styles.projectName}>Calculator </Text>
-          <Text style={styles.date}>(Jun 2019 - Jul 2019)</Text>
+          <Text style={styles.projectName}>{projectName} </Text>
+          <Text style={styles.date}>{projectLink}</Text>
           <Text style={styles.aboutProject}>
-            During this training, I learned Java programming language from
-            scratch. It was a nice aboutProject for me as, I am passionate and
-            curious to learn new things.
-          </Text>
-        </View>
-
-        <View style={styles.projectDetails}>
-          <Text style={styles.projectName}>Calculator </Text>
-          <Text style={styles.date}>(Jun 2019 - Jul 2019)</Text>
-          <Text style={styles.aboutProject}>
-            During this training, I learned Java programming language from
-            scratch. It was a nice aboutProject for me as, I am passionate and
-            curious to learn new things.
+            {projectDescription}
           </Text>
         </View>
       </View>

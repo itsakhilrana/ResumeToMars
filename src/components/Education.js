@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text, View, StyleSheet } from '@react-pdf/renderer'
+import { useSelector } from 'react-redux'
 
 const styles = StyleSheet.create({
   blocks: {
@@ -40,27 +41,33 @@ const styles = StyleSheet.create({
 })
 
 const Education = () => {
+
+  const educationDetails = localStorage.getItem('educationDetails')
+      ? JSON.parse(localStorage.getItem('educationDetails'))
+      : {}
+      
+  const {degree,major,cgpa,startDate,endDate} = educationDetails
   return (
     <View style={styles.blocks}>
       <Text style={styles.educationBlock}>EDUCATION</Text>
       <View style={styles.educationColumn}>
         <View style={styles.educationDetails}>
-          <Text style={styles.degree}>Bachelor of Technology (B.Tech) </Text>
+          <Text style={styles.degree}>{degree} </Text>
           <Text style={styles.clgName}>
-            SRI SUKHMANI INSTITUTE OF ENGINEERING & TECHNOLOGY
+            {major}
           </Text>
-          <Text style={styles.date}>(Expected graduation Jun 2021)</Text>
-          <Text style={styles.cgpa}>CGPA: 7.8</Text>
+          <Text style={styles.date}>{`(Expected graduation ${endDate})`}</Text>
+          <Text style={styles.cgpa}>{cgpa}</Text>
         </View>
 
-        <View style={styles.educationDetails}>
+        {/* <View style={styles.educationDetails}>
           <Text style={styles.degree}>Bachelor of Technology (B.Tech) </Text>
           <Text style={styles.clgName}>
             SRI SUKHMANI INSTITUTE OF ENGINEERING & TECHNOLOGY
           </Text>
           <Text style={styles.date}>(Expected graduation Jun 2021)</Text>
           <Text style={styles.cgpa}>CGPA: 7.8</Text>
-        </View>
+        </View> */}
       </View>
     </View>
   )

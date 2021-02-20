@@ -1,17 +1,38 @@
 .HomeScreen {
-  height: 100vh;
+  
   display: flex;
 }
 
 .Intro {
   margin-top: 60px;
   width: 500px;
+  position: relative;
 }
 
-.Main_P {
+.Punch{
+  
+  margin-top: 10px;
+}
+
+.Desktop_P {
   font-size: 40px;
   font-weight: 700;
   color: white;
+  width: 200px;
+}
+
+.Mobile_Combo{
+  display: none;
+}
+
+.Mobile_P{
+  display: none;
+}
+.Combo{
+  position: absolute;
+  top: 0;
+  margin-left: 230px;
+  
 }
 
 .Sub_P {
@@ -50,7 +71,7 @@
 }
 .Scrolling_Templates {
   overflow: hidden;
-  height: 600px;
+  height: 550px;
   display: flex;
 }
 
@@ -125,15 +146,35 @@
   }
 
   .Intro {
-    margin-top: 60px;
+    margin-top: 30px;
     width: 360px;
     margin-left: 10px;
   }
   
-  .Main_P {
-    font-size: 40px;
+  .Punch{
+  
+    margin-top: 0px;
+  }
+
+  .Desktop_P{
+    display: none;
+  }  
+
+
+  .Mobile_P{
+    display: inline-block;
+    font-size: 30px;
     font-weight: 700;
     color: white;
+    width: 360px;
+  }
+
+  .Mobile_Combo{
+    display: inline-block;
+  }
+
+  .Combo{
+    display: none;
   }
   
   .Sub_P {

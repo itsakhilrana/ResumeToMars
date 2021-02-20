@@ -84,9 +84,11 @@ const ProjectScreen = ({ history }) => {
           ></input>
           <br></br>
 
-          <button type="submit">Proceed to download</button>
-          <br></br>
-          <button onClick={previousHandler}>Back to Personal Info</button>
+          <div className="btn_div">
+            <button onClick={previousHandler}>Previous</button>
+            <button type="submit">Download</button>
+            
+          </div>
         </form>
       </div>
     </div>

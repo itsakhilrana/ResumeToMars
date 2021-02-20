@@ -1,49 +1,52 @@
-.EducationScreen{
-    height: 100vh;
-    justify-content: center;
-    display: flex;
-    align-items: center;
+.EducationScreen {
+  height: 585px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
-.Education_Info p{
-    font-size: 30px;
-    font-weight: 700;
-    color: white;
+.Education_Info {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.Form input {
-    color: white;
-    width: 380px;
-  
-    padding: 5px 0px;
-    margin: 15px 0;
-    box-sizing: border-box;
-    border: none;
-    border-bottom: 2px solid white;
-    background-color: transparent;
-  
-    letter-spacing: 1px;
+.Education_Info p {
+  font-size: 50px;
+  font-weight: 700;
+  color: white;
+  width: 200px;
+  margin-right: 100px;
+}
+
+.btn_div {
+  display: flex;
+  justify-content: space-between;
+}
+.btn_div button {
+  margin-top: 15px;
+  height: 40px;
+  width: 150px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 414px) {
+  .EducationScreen {
+    padding-top: 0px;
+    height: 700px;
+    padding-top: 60px;
   }
-  
-  .Form button {
-    margin-top: 15px;
-    height: 40px;
-    width: 380px;
+
+  .Education_Info {
+    display: inline-block;
+  }
+
+  .Education_Info p {
+    font-size: 50px;
     font-weight: 700;
-  
-    letter-spacing: 1px;
+    color: white;
+    width: 200px;
+    margin-right: 100px;
   }
-  
-  input:focus,
-  textarea:focus,
-  select:focus {
-    outline: none;
-  }
-  
-  .Form button:hover {
-    border: none;
-    background-color: rgb(204, 197, 197);
-    outline: none;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-  }
+}

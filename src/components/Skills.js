@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text, View, StyleSheet } from '@react-pdf/renderer'
+import {useSelector} from 'react-redux'
 
 const styles = StyleSheet.create({
   blocks: {
@@ -35,6 +36,10 @@ const styles = StyleSheet.create({
   }
 })
 const Skills = () => {
+  const projectDetails = localStorage.getItem('projectDetails')
+    ? JSON.parse(localStorage.getItem('projectDetails'))
+    : {}
+  const {skills} = projectDetails  
   return (
     <View style={styles.blocks}>
       <Text style={styles.skillBlock}>SKILLS</Text>
@@ -42,18 +47,8 @@ const Skills = () => {
         <View style={styles.skillDetails}>
           <View style={styles.column}>
             <View style={styles.row}>
-              <Text style={styles.skills}>Core Java </Text>
-              <Text style={styles.skills}>Core Java </Text>
-              <Text style={styles.skills}>Core Java </Text>
-              <Text style={styles.skills}>Core Java </Text>
-              <Text style={styles.skills}>Core Java </Text>
-            </View>
-            <View style={styles.row}>
-              <Text style={styles.skills}>Core Java </Text>
-              <Text style={styles.skills}>Core Java </Text>
-              <Text style={styles.skills}>Core Java </Text>
-              <Text style={styles.skills}>Core Java </Text>
-              <Text style={styles.skills}>Core Java </Text>
+              <Text style={styles.skills}>{skills} </Text>
+              
             </View>
           </View>
          

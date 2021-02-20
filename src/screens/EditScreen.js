@@ -9,6 +9,7 @@ const Edit = ({ history }) => {
   const [email, setEmail] = useState('')
   const [phoneNo, setphoneNo] = useState('')
   const [about, setAbout] = useState('')
+  const [profession,setProfession] = useState('')
 
   const dispatch = useDispatch()
 
@@ -17,33 +18,31 @@ const Edit = ({ history }) => {
     email: email,
     about: about,
     phoneNo: phoneNo,
-  } 
-  
+    profession:profession
+  }
+
   // const personalDetails = useSelector((state) => state.personalDetails)
   // console.log(personalDetails)
 
-  
   useEffect(() => {
     const personalDetails = localStorage.getItem('personalDetails')
-  ? JSON.parse(localStorage.getItem('personalDetails'))
-  : {}
+      ? JSON.parse(localStorage.getItem('personalDetails'))
+      : {}
 
-  console.log(personalDetails)
+    console.log(personalDetails)
     setName(personalDetails.name)
     setEmail(personalDetails.email)
     setphoneNo(personalDetails.phoneNo)
     setAbout(personalDetails.about)
+    setProfession(personalDetails.profession)
   }, [])
 
   const submitHandler = (e) => {
     e.preventDefault()
-    
 
     dispatch(action(details))
-   
 
     history.push('/education')
-    
   }
   return (
     <div className="EditScreen">
@@ -74,13 +73,20 @@ const Edit = ({ history }) => {
           <br></br>
           <input
             type="text"
+            value={profession}
+            placeholder="Profession"
+            onChange={(e) => setProfession(e.target.value)}
+          ></input>
+          <br></br>
+          <input
+            type="text"
             value={about}
             placeholder="About"
             onChange={(e) => setAbout(e.target.value)}
           ></input>
           <br></br>
 
-          <button type="submit">Next to education details</button>
+          <button type="submit">Next</button>
           {/* <div className="Testing_btn">
             <div className="Previous_btn">Previous</div>
             <div className="Next_btn">Next</div>
