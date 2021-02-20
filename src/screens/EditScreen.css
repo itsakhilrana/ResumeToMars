@@ -1,0 +1,76 @@
+.EditScreen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Personal_Info p {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+
+.Form input {
+  color: white;
+  width: 380px;
+
+  padding: 5px 0px;
+  margin: 15px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: transparent;
+
+  letter-spacing: 1px;
+}
+
+.Form button {
+  margin-top: 15px;
+  height: 40px;
+  width: 380px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+.Form button:hover {
+  border: none;
+  background-color: rgb(204, 197, 197);
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.Testing_btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Previous_btn {
+  width: 150px;
+  height: 30px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+
+.Next_btn {
+  width: 150px;
+  height: 30px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}

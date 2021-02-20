@@ -1,8 +1,6 @@
 import React from 'react'
-import { Page, Text, View, Document, StyleSheet} from '@react-pdf/renderer'
-
-
-
+import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer'
+import { useSelector } from 'react-redux'
 
 const styles = StyleSheet.create({
   page: {
@@ -10,7 +8,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#E4E4E4',
   },
   header: {
-      color:"white",
+    color: 'white',
     paddingTop: 10,
     paddingBottom: 10,
     paddingLeft: 20,
@@ -32,7 +30,7 @@ const styles = StyleSheet.create({
 
   userName: {
     fontSize: 20,
-    fontFamily:"Roboto regular"
+    fontFamily: 'Roboto regular',
   },
   userProfession: {
     fontSize: 12,
@@ -58,16 +56,18 @@ const styles = StyleSheet.create({
   },
 })
 
+const Header = () => {
+
+  const resume = useSelector(state => state.resume)
+  const {name,email,about} = resume.personalDetails
 
 
-const Header = ({ name }) => {
   return (
     <View style={styles.header}>
       <View style={styles.header_Container}>
         <View style={styles.infoColumn}>
           <Text style={styles.userName}>
-            Your Name{'  '}
-            <Text style={styles.userProfession}>Developer & Designer</Text>
+            {name}<Text style={styles.userProfession}>Developer & Designer</Text>
           </Text>
           <View style={styles.line}></View>
           <Text style={styles.userPunch}>

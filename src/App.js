@@ -1,8 +1,13 @@
 import React from 'react'
-import { Route, Switch} from 'react-router-dom'
+import { Route, Switch, Link} from 'react-router-dom'
 import Edit from './screens/EditScreen'
 import './App.css'
 import HomeScreen from './screens/HomeScreen'
+import DownloadScreen from './screens/DownloadScreen'
+import EducationScreen from './screens/EducationScreen'
+import TrainingScreen from './screens/Trainings'
+import ProjectScreen from './screens/ProjectScreen'
+
 
 import {
   PDFDownloadLink,
@@ -70,10 +75,12 @@ const MyDoc = () => (
   </Document>
 )
 
+
+
 function App() {
   return (
     <div className="App">
-      <p className="Web_Name">ResumeToMars</p>
+      <Link style={{textDecoration:"none"}} to="/"><p className="Web_Name">ResumeToMars</p></Link>
       {/* <PDFDownloadLink document={<MyDoc />} fileName="somename.pdf">
         {({ blob, url, loading, error }) =>
           loading ? 'Loading document...' : 'Download now!'
@@ -82,6 +89,11 @@ function App() {
       <Switch>
       <Route exact path='/' component={HomeScreen}></Route>
       <Route  path='/edit' component={Edit}></Route>
+      <Route path='/download' component={DownloadScreen}></Route>
+      <Route path='/education' component={EducationScreen}></Route>
+      <Route path='/trainings' component={TrainingScreen}></Route>
+      <Route path='/skillsnproject' component={ProjectScreen}></Route>
+      
       </Switch>
     </div>
   )

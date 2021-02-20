@@ -1,0 +1,12 @@
+.ProjectScreen{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Project_Info{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}

@@ -1,0 +1,12 @@
+.TrainingScreen{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Training_Info p{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
