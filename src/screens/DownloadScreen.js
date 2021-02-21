@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import Body from '../components/Body'
 import { useSelector, useDispatch, Provider } from 'react-redux'
 import { RESET_DETAILS } from '../constants/resumeConstants'
+import onmars from '../imgs/onmars.svg'
 import store from '../store'
 import './DownloadScreen.css'
 import {
@@ -59,7 +60,9 @@ const DownloadScreen = ({ history }) => {
   return (
     <div className="DownloadScreen">
       <div className="Download_Info">
-        <p>Hurry! You're on Mars!</p>
+        <img src={onmars}></img>
+        <div>
+        <p>Hurray! You're on Mars!</p>
         <PDFDownloadLink
           style={{ textDecoration: 'none' }}
           document={<MyDoc />}
@@ -71,12 +74,13 @@ const DownloadScreen = ({ history }) => {
                 Loading Please Wait...
               </p>
             ) : (
-              <div className="download_btn" onClick={clear} >Download </div>
+              <div className="download_btn" onClick={clear} >Download Resume </div>
             )
           }
 
           {/* {({ loading }) => (loading ? null : clear())} */}
         </PDFDownloadLink>
+        </div>
       </div>
     </div>
   )

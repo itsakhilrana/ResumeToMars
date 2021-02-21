@@ -49,7 +49,7 @@ const Trainings = ({ history }) => {
   return (
     <div className="TrainingScreen">
       <div className="Training_Info">
-        <p>Training Experience</p>
+        <p>Your Training Experience</p>
 
         <form className="Form" onSubmit={submitHandler}>
           <input

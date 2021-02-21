@@ -6,21 +6,24 @@
 
 .App{
   
-  background-color: #202327;
+  background-image: url('./imgs/stars.svg');
   padding: 20px 40px;
   font-family: Roboto;
  
 }
 
 .Web_Name{
-  color: white;
+  background: -webkit-linear-gradient(#FFC541, #FCD71F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
 }
 
 
 
 @media only screen and (max-width: 414px) {
   .App{
-    background-color: #202327;
+    
     padding: 20px 10px;
     font-family: Roboto;
     width: 100%;
@@ -30,5 +33,6 @@
   .Web_Name{
     color: white;
     margin-left: 10px;
+    font-weight: 700;
   }
 }

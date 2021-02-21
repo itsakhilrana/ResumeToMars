@@ -73,7 +73,7 @@ const MyDoc = () => (
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" >
       <Link style={{ textDecoration: 'none' }} to="/">
         <p className="Web_Name">ResumeToMars</p>
       </Link>
@@ -91,6 +91,7 @@ function App() {
         <Route path="/trainings" component={TrainingScreen}></Route>
         <Route path="/skillsnproject" component={ProjectScreen}></Route>
         <Route path="/school" component={SchoolScreen}></Route>
+        <Route component={HomeScreen}></Route>
       </Switch>
     </div>
   )

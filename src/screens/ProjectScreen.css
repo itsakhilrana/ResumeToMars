@@ -20,12 +20,13 @@
 
 .Project_Label{
   width: 200px;
-  height: 30px;
+  height: 40px;
   
   justify-content: center;
   display: flex;
   align-items: center;
-  background-color: white
+  background-color: white;
+  border-radius: 20px;
 }
 
 
@@ -39,7 +40,7 @@
     .Project_Info {
       padding-top: 80px;
     display: inline-block;
-    height: 700px;
+    height: 900px;
     }
   
     .Project_Info p {
@@ -52,12 +53,13 @@
 
     .Project_Label{
       width: 200px;
-      height: 30px;
+      height: 40px;
       font-size: "14px";
       justify-content: center;
       display: flex;
       align-items: center;
       background-color: white;
       margin: 20px 0px;
+      
     }
   }

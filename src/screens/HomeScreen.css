@@ -107,10 +107,11 @@
   font-size: 12px;
   margin-top: 10px;
   position: absolute;
-  bottom: 70px;
+  bottom: 60px;
   width: 300px;
   left: 40px;
   color: white;
+  letter-spacing: 1px;
 }
 
 .Template_btn {
@@ -163,10 +164,11 @@
 
   .Mobile_P{
     display: inline-block;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 700;
     color: white;
     width: 360px;
+    margin-top: 30px;
   }
 
   .Mobile_Combo{
@@ -180,8 +182,9 @@
   .Sub_P {
     font-size: 25px;
     font-size: 400;
-    color: #afafaf;
-    margin-top: 10px;
+    color: #ffffff;
+    margin-top: 80px;
+    font-weight: 400;
   }
   
   .Swipe_Arrow {
@@ -198,7 +201,7 @@
   }
   
   .Templates_Container {
-    margin-top: 60px;
+    margin-top: 50px;
   }
   
   /* .Scrolling_Templates{
@@ -216,28 +219,28 @@
     overflow: auto;
     height: 560px;
     display: flex;
-    
+    margin-left: 10px;
   }
   
   .Template_Card {
     width: 380px;
-    height: 500px;
+    height: 550px;
     position: relative;
     
     margin-left: 0px;
-    margin-right: 20px;
+    margin-right: 40px;
     /* background-color: tomato; */
   }
   
   .Template_Card img {
     width: 380px;
-    height: 500px;
+    height: 550px;
   }
   
   .Template_Type {
     position: absolute;
-    bottom: 140px;
-    left: 40px;
+    bottom: 130px;
+    left: 30px;
     font-weight: 500;
     color: white;
     font-size: 20px;
@@ -252,16 +255,17 @@
     font-size: 12px;
     margin-top: 10px;
     position: absolute;
-    bottom: 70px;
-    left: 40px;
+    bottom: 50px;
+    left: 30px;
     color: white;
+    letter-spacing: 1px;
   }
   
   .Template_btn {
     position: absolute;
-    width: 140px;
+    width: 200px;
     height: 35px;
-    border-radius: 10px;
+    border-radius: 20px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -269,8 +273,8 @@
   
     font-weight: 500;
     bottom: 0px;
-    left: 120px;
-    top: 480px;
+    left: 85px;
+    top: 520px;
   
     font-size: 14px;
     color: black;
@@ -287,8 +291,10 @@
     /* background-color: rgba(255, 255, 255, 0.13); */
     color: rgba(255, 255, 255, 0.664);
     font-weight: 500;
-    margin-top: 0px;
+    margin-top: 20px;
     font-weight: 300;
+    font-size: 14px;
+    margin-left: 5px;
     
   }
     

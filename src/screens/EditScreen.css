@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #202327;
+  
 }
 
 .Personal_Info {
@@ -54,7 +54,8 @@
   height: 40px;
   width: 380px;
   font-weight: 700;
-
+  border-radius: 20px;
+  border: none;
   letter-spacing: 1px;
 }
 
