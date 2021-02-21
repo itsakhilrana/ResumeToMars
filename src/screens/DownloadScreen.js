@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import Body from '../components/Body'
 import { useSelector, useDispatch, Provider } from 'react-redux'
+import { RESET_DETAILS } from '../constants/resumeConstants'
 import store from '../store'
 import './DownloadScreen.css'
 import {
@@ -37,27 +38,54 @@ const MyDoc = () => (
   </Provider>
 )
 
-const DownloadScreen = () => {
+const DownloadScreen = ({ history }) => {
+
+  const [done,setDone] = useState(false)
+  const dispatch = useDispatch()
+
+  useEffect(() => {}, [])
+  const clear = () => {
+    localStorage.removeItem('personalDetails')
+    localStorage.removeItem('educationDetails')
+    localStorage.removeItem('schoolDetails')
+    localStorage.removeItem('trainingDetails')
+    localStorage.removeItem('projectDetails')
+    dispatch({ type: RESET_DETAILS })
+    history.push('/')
+    
+  }
+  
+  
   return (
     <div className="DownloadScreen">
       <div className="Download_Info">
         <p>Hurry! You're on Mars!</p>
-      <PDFDownloadLink style={{textDecoration:'none'}} document={<MyDoc />} fileName="ResumeToMars.pdf">
-        {({ blob, url, loading, error }) =>
-          loading ? <p style={{color:"white",fontSize:"16px"}}>Loading Please Wait...</p> : <div className="download_btn">Download</div>
-        }
-      </PDFDownloadLink>
-      </div>
-      
+        <PDFDownloadLink
+          style={{ textDecoration: 'none' }}
+          document={<MyDoc />}
+          fileName="ResumeToMars.pdf"
+        >
+          {({ blob, url, loading, error }) =>
+            loading ? (
+              <p style={{ color: 'white', fontSize: '16px' }}>
+                Loading Please Wait...
+              </p>
+            ) : (
+              <div className="download_btn" onClick={clear} >Download </div>
+            )
+          }
 
-      
+          {/* {({ loading }) => (loading ? null : clear())} */}
+        </PDFDownloadLink>
+      </div>
     </div>
   )
 }
 
 export default DownloadScreen
 
-
-{/* <PDFViewer style={styles.pdfViewer}>
+{
+  /* <PDFViewer style={styles.pdfViewer}>
         <MyDoc></MyDoc>
-      </PDFViewer> */}
+      </PDFViewer> */
+}

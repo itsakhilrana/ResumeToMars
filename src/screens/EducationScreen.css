@@ -34,12 +34,14 @@
 @media only screen and (max-width: 414px) {
   .EducationScreen {
     padding-top: 0px;
-    height: 700px;
-    padding-top: 60px;
+    padding-top: 0px;
+    display: inline;
   }
 
   .Education_Info {
+    padding-top: 80px;
     display: inline-block;
+    height: 700px;
   }
 
   .Education_Info p {

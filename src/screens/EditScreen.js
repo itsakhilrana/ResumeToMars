@@ -9,7 +9,8 @@ const Edit = ({ history }) => {
   const [email, setEmail] = useState('')
   const [phoneNo, setphoneNo] = useState('')
   const [about, setAbout] = useState('')
-  const [profession,setProfession] = useState('')
+  const [profession, setProfession] = useState('')
+  
 
   const dispatch = useDispatch()
 
@@ -18,7 +19,7 @@ const Edit = ({ history }) => {
     email: email,
     about: about,
     phoneNo: phoneNo,
-    profession:profession
+    profession: profession,
   }
 
   // const personalDetails = useSelector((state) => state.personalDetails)
@@ -50,6 +51,8 @@ const Edit = ({ history }) => {
         <p>Your Personal Info</p>
 
         <form className="Form" onSubmit={submitHandler}>
+
+         
           <input
             type="text"
             value={name}
@@ -81,7 +84,7 @@ const Edit = ({ history }) => {
           <input
             type="text"
             value={about}
-            placeholder="About"
+            placeholder="Summary"
             onChange={(e) => setAbout(e.target.value)}
           ></input>
           <br></br>

@@ -70,7 +70,7 @@ const Header = () => {
       <View style={styles.header_Container}>
         <View style={styles.infoColumn}>
           <View style={styles.name_Container}>
-            <Text style={styles.userName}>{name}Akhil Rana</Text>
+            <Text style={styles.userName}>{name}</Text>
             <Text style={styles.userProfession}>{profession}</Text>
           </View>
 

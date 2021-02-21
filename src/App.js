@@ -6,6 +6,7 @@ import star from './imgs/stars.svg'
 import HomeScreen from './screens/HomeScreen'
 import DownloadScreen from './screens/DownloadScreen'
 import EducationScreen from './screens/EducationScreen'
+import SchoolScreen from './screens/SchoolScreen'
 import TrainingScreen from './screens/Trainings'
 import ProjectScreen from './screens/ProjectScreen'
 
@@ -89,6 +90,7 @@ function App() {
         <Route path="/education" component={EducationScreen}></Route>
         <Route path="/trainings" component={TrainingScreen}></Route>
         <Route path="/skillsnproject" component={ProjectScreen}></Route>
+        <Route path="/school" component={SchoolScreen}></Route>
       </Switch>
     </div>
   )

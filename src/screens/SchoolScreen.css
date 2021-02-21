@@ -1,0 +1,55 @@
+.SchoolScreen {
+    height: 585px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  
+  .School_Info {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .School_Info p {
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+    width: 200px;
+    margin-right: 100px;
+  }
+  
+  .btn_div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn_div button {
+    margin-top: 15px;
+    height: 40px;
+    width: 150px;
+    font-weight: 700;
+  
+    letter-spacing: 1px;
+  }
+  
+  @media only screen and (max-width: 414px) {
+    .SchoolScreen {
+      padding-top: 0px;
+      padding-top: 0px;
+      display: inline;
+    }
+  
+    .School_Info {
+      padding-top: 80px;
+      display: inline-block;
+      height: 700px;
+    }
+  
+    .School_Info p {
+      font-size: 50px;
+      font-weight: 700;
+      color: white;
+      width: 200px;
+      margin-right: 100px;
+    }
+  }
+  

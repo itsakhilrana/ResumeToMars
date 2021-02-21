@@ -18,16 +18,28 @@
     width: 200px;
 }
 
+.Project_Label{
+  width: 200px;
+  height: 30px;
+  
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background-color: white
+}
+
 
 @media only screen and (max-width: 414px) {
     .ProjectScreen {
       padding-top: 0px;
-      height: 700px;
-      padding-top: 60px;
+    padding-top: 0px;
+    display: inline;
     }
   
     .Project_Info {
-      display: inline-block;
+      padding-top: 80px;
+    display: inline-block;
+    height: 700px;
     }
   
     .Project_Info p {
@@ -36,5 +48,16 @@
       color: white;
       width: 200px;
       margin-right: 100px;
+    }
+
+    .Project_Label{
+      width: 200px;
+      height: 30px;
+      font-size: "14px";
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      background-color: white;
+      margin: 20px 0px;
     }
   }

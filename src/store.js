@@ -23,8 +23,12 @@ const personalDetails = localStorage.getItem('personalDetails')
   ? JSON.parse(localStorage.getItem('projectDetails'))
   : {}
 
+  const schoolDetails = localStorage.getItem('schoolDetails')
+  ? JSON.parse(localStorage.getItem('schoolDetails'))
+  : {}
+
 const initialState = {
-  resume: { personalDetails: personalDetails , educationDetails:educationDetails, trainingDetails:trainingDetails, projectDetails:projectDetails},
+  resume: { personalDetails: personalDetails , educationDetails:educationDetails, schoolDetails:schoolDetails, trainingDetails:trainingDetails, projectDetails:projectDetails},
 }
 const middleware = [thunk]
 

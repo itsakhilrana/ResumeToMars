@@ -5,7 +5,7 @@
 }
 
 .App{
-  height: 100vh;
+  
   background-color: #202327;
   padding: 20px 40px;
   font-family: Roboto;
@@ -24,7 +24,7 @@
     padding: 20px 10px;
     font-family: Roboto;
     width: 100%;
-   height: 764px;
+   
   }
 
   .Web_Name{

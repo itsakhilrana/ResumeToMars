@@ -22,12 +22,14 @@
 @media only screen and (max-width: 414px) {
     .TrainingScreen {
       padding-top: 0px;
-      height: 700px;
-      padding-top: 60px;
+    padding-top: 0px;
+    display: inline;
     }
   
     .Training_Info {
-      display: inline-block;
+      padding-top: 80px;
+    display: inline-block;
+    height: 700px;
     }
   
     .Training_Info p {

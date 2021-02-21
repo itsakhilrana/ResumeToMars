@@ -5,7 +5,7 @@ import './EducationScreen.css'
 
 const EducationScreen = ({ history }) => {
   const [degree, setDegree] = useState('')
-  const [major, setMajor] = useState('')
+  const [college, setcollege] = useState('')
   const [cgpa, setCgpa] = useState('')
   const [startDate, setStartDate] = useState('')
   const [endDate, setEndDate] = useState('')
@@ -14,10 +14,10 @@ const EducationScreen = ({ history }) => {
 
   const details = {
     degree,
-    major,
+    college,
     cgpa,
     endDate,
-    startDate
+    startDate,
   }
 
   useEffect(() => {
@@ -25,19 +25,18 @@ const EducationScreen = ({ history }) => {
       ? JSON.parse(localStorage.getItem('educationDetails'))
       : {}
 
-      setEndDate(educationDetails.endDate)
-      setStartDate(educationDetails.startDate)
+    setEndDate(educationDetails.endDate)
+    setStartDate(educationDetails.startDate)
     setDegree(educationDetails.degree)
-    setMajor(educationDetails.major)
+    setcollege(educationDetails.college)
     setCgpa(educationDetails.cgpa)
-    
   }, [])
   const submitHandler = (e) => {
     e.preventDefault()
 
     dispatch({ type: EDUCATION_DETAILS, payload: details })
     localStorage.setItem('educationDetails', JSON.stringify(details))
-    history.push('/trainings')
+    history.push('/school')
   }
 
   const previousHandler = () => {
@@ -46,21 +45,37 @@ const EducationScreen = ({ history }) => {
   return (
     <div className="EducationScreen">
       <div className="Education_Info">
-        <p>Your Educational Background</p>
+        <p>Your Graduation Background</p>
 
         <form className="Form" onSubmit={submitHandler}>
-          <input
-            type="text"
+          <select
+            className="Select"
             value={degree}
-            placeholder="Degree"
             onChange={(e) => setDegree(e.target.value)}
-          ></input>
+          >
+            <option className="Option" value="B">
+              Select a Degree
+            </option>
+            <option className="Option" value="Bachelor of Technology - Computer Science Engineering">
+              Bachelor of Technology - Computer Science & Engineering
+            </option>
+            <option className="Option" value="Bachelor of Technology - Aeronautical Engineering">
+              Bachelor of Technology - Aeronautical Engineering
+            </option>
+            <option className="Option" value="Bachelor of Technology - Mechanical Engineering">
+              Bachelor of Technology - Mechanical Engineering
+            </option>
+            <option className="Option" value="Bachelor of Technology - Electronics & Communication">
+              Bachelor of Technology - Electronics & Communication
+            </option>
+
+          </select>
           <br></br>
           <input
             type="text"
-            value={major}
+            value={college}
             placeholder="College"
-            onChange={(e) => setMajor(e.target.value)}
+            onChange={(e) => setcollege(e.target.value)}
           ></input>
           <br></br>
           <input
@@ -72,24 +87,15 @@ const EducationScreen = ({ history }) => {
           <br></br>
           <input
             type="text"
-            value={startDate}
-            placeholder="Start Date"
-            onChange={(e) => setStartDate(e.target.value)}
-          ></input>
-          <br></br>
-          <input
-            type="text"
             value={endDate}
-            placeholder="End Date"
+            placeholder="Expected Graduation"
             onChange={(e) => setEndDate(e.target.value)}
           ></input>
           <br></br>
-         
 
           <div className="btn_div">
             <button onClick={previousHandler}>Previous</button>
             <button type="submit">Next</button>
-            
           </div>
         </form>
       </div>

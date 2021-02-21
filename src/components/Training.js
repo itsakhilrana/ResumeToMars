@@ -57,7 +57,7 @@ const Training = () => {
           <Text style={styles.company}>
             {company}
           </Text>
-          <Text style={styles.date}>{`(${startDate} - ${endDate})`}</Text>
+          {/* <Text style={styles.date}>{ startDate }</Text> */}
           <Text style={styles.experience}>
             {about}
           </Text>

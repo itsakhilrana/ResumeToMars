@@ -19,10 +19,26 @@
   margin-right: 100px;
 }
 
+.Select {
+  color: rgb(255, 255, 255);
+  width: 380px;
+  padding: 5px 0px;
+  margin: 15px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.651);
+  background-color: transparent;
+
+  letter-spacing: 1px;
+}
+
+.Option{
+  color: #202327;
+}
+
 .Form input {
   color: white;
   width: 380px;
-
   padding: 5px 0px;
   margin: 15px 0;
   box-sizing: border-box;
@@ -83,24 +99,27 @@ select:focus {
   border-radius: 10px;
 }
 
-
 @media only screen and (max-width: 414px) {
-
-  .EditScreen{
+  .EditScreen {
     padding-top: 0px;
-    height: 700px;
-    padding-top: 60px;
-    
+    padding-top: 0px;
+    display: inline;
   }
   .Personal_Info {
+    padding-top: 80px;
     display: inline-block;
+    height: 700px;
   }
-  
+
   .Personal_Info p {
     font-size: 50px;
     font-weight: 700;
     color: white;
     width: 200px;
     margin-right: 0px;
+  }
+
+  .Form {
+    margin-top: 40px;
   }
 }

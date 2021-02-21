@@ -44,7 +44,7 @@ const Trainings = ({ history }) => {
   }
 
   const previousHandler = () =>{
-    history.push('/education')
+    history.push('/school')
   }
   return (
     <div className="TrainingScreen">
@@ -69,14 +69,14 @@ const Trainings = ({ history }) => {
           <input
             type="text"
             value={startDate}
-            placeholder="Start Date"
+            placeholder="Start Month & Year"
             onChange={(e) => setstartDate(e.target.value)}
           ></input>
           <br></br>
           <input
             type="text"
             value={endDate}
-            placeholder="End Date"
+            placeholder="End Month & Year"
             onChange={(e) => setendDate(e.target.value)}
           ></input>
           <br></br>
