@@ -1,6 +1,5 @@
 import React from 'react'
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer'
-import { useSelector } from 'react-redux'
 
 const styles = StyleSheet.create({
   page: {
@@ -51,34 +50,28 @@ const styles = StyleSheet.create({
   linkColumn: {
     flexDirection: 'column',
     marginLeft: '50px',
-    alignItems:"flex-end"
+    alignItems: 'flex-end',
   },
   links: {
     fontSize: 10,
-    
   },
 })
 
-const Header = () => {
-  const personalDetails = localStorage.getItem('personalDetails')
-    ? JSON.parse(localStorage.getItem('personalDetails'))
-    : {}
-  const { name, email, about, phoneNo, profession } = personalDetails
-
+const Template2 = () => {
   return (
     <View style={styles.header}>
       <View style={styles.header_Container}>
         <View style={styles.infoColumn}>
           <View style={styles.name_Container}>
-            <Text style={styles.userName}>{name}</Text>
-            <Text style={styles.userProfession}>{profession}</Text>
+            <Text style={styles.userName}>Template 2</Text>
+            <Text style={styles.userProfession}>fdsfdd</Text>
           </View>
 
-          <Text style={styles.userPunch}>{about}</Text>
+          <Text style={styles.userPunch}>dfdgdfgfd</Text>
         </View>
         <View style={styles.linkColumn}>
-          <Text style={styles.links}>{email}</Text>
-          <Text style={styles.links}>+91 {" "}{phoneNo}</Text>
+          <Text style={styles.links}>fgfdgdfgfd</Text>
+          <Text style={styles.links}>gfdgfgfhf</Text>
           {/* <Text style={styles.links}>linkdedIn.com</Text> */}
         </View>
       </View>
@@ -86,4 +79,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Template2

@@ -50,7 +50,7 @@ const HomeScreen = () => {
                 personalize this basic resume layout that can be completed in
                 under ten minutes by intuitive process.
               </p>
-              <Link to='/edit'><div className="Template_btn">Select Template</div></Link>
+              <Link to='/edit?redirect=basic'><div className="Template_btn">Select Template</div></Link>
             </div>
 
             <div className="Template_Card">
@@ -70,7 +70,7 @@ const HomeScreen = () => {
                 personalize this basic resume layout that can be completed in
                 under ten minutes by intuitive process.
               </p>
-              <Link to='/edit'><div className="Template_btn">Select Template</div></Link>
+              <Link to='/edit?redirect=intermidiate'><div className="Template_btn">Select Template</div></Link>
             </div>
 
 

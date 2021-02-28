@@ -4,14 +4,15 @@ import { useSelector, useDispatch } from 'react-redux'
 import { PERSONAL_DETAILS } from '../constants/resumeConstants'
 import { action } from '../actions/action'
 
-const Edit = ({ history }) => {
+const Edit = ({ history, location }) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [phoneNo, setphoneNo] = useState('')
   const [about, setAbout] = useState('')
   const [profession, setProfession] = useState('')
   
-
+  const redirect = location.search ? location.search.split("=")[1] : '/'
+  console.log(redirect)
   const dispatch = useDispatch()
 
   const details = {
@@ -20,7 +21,11 @@ const Edit = ({ history }) => {
     about: about,
     phoneNo: phoneNo,
     profession: profession,
+    redirect:redirect
   }
+
+
+  
 
   // const personalDetails = useSelector((state) => state.personalDetails)
   // console.log(personalDetails)
