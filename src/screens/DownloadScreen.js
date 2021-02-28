@@ -30,20 +30,12 @@ const styles = StyleSheet.create({
   },
 })
 
-
-
-
-
-
-
 const DownloadScreen = ({ history }) => {
-
-
   const personalDetails = localStorage.getItem('personalDetails')
-  ? JSON.parse(localStorage.getItem('personalDetails'))
-  : {}
+    ? JSON.parse(localStorage.getItem('personalDetails'))
+    : {}
 
-  const {redirect} = personalDetails
+  const { redirect } = personalDetails
 
   const [done, setDone] = useState(false)
   const dispatch = useDispatch()
@@ -54,15 +46,16 @@ const DownloadScreen = ({ history }) => {
     <Provider store={store}>
       <Document>
         <Page size="A4" style={styles.page}>
-  
-          {
-            redirect === 'basic' ? <Template1></Template1> : <Template2></Template2>
-          }
+          <Template2></Template2>
+          {/* {redirect === 'basic' ? (
+            <Template1></Template1>
+          ) : (
+            <Template2></Template2>
+          )} */}
         </Page>
       </Document>
     </Provider>
   )
-
 
   const clear = () => {
     localStorage.removeItem('personalDetails')
@@ -76,10 +69,14 @@ const DownloadScreen = ({ history }) => {
 
   return (
     <div className="DownloadScreen">
-      <div className="Download_Info">
+      <PDFViewer style={styles.pdfViewer}>
+            <MyDoc></MyDoc>
+          </PDFViewer>
+      {/* <div className="Download_Info">
         <img src={onmars}></img>
         <div>
           <p>Hurray! You're on Mars!</p>
+         
           <PDFDownloadLink
             style={{ textDecoration: 'none' }}
             document={<MyDoc />}
@@ -96,19 +93,11 @@ const DownloadScreen = ({ history }) => {
                 </div>
               )
             }
-
-            {/* {({ loading }) => (loading ? null : clear())} */}
           </PDFDownloadLink>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
 
 export default DownloadScreen
-
-{
-  /* <PDFViewer style={styles.pdfViewer}>
-        <MyDoc></MyDoc>
-      </PDFViewer> */
-}
