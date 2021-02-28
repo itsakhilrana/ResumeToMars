@@ -37,7 +37,7 @@ const HomeScreen = () => {
               <img src={ResumeTem}></img>
 
               <p className="Template_Type">
-                Basic
+                Beginner
                 <span style={{ marginLeft: '10px' }} className="Rating">
                   {' '}
                   4.5{' '}
@@ -57,7 +57,7 @@ const HomeScreen = () => {
               <img src={ResumeTem}></img>
 
               <p className="Template_Type">
-                Basic
+                Intermediate
                 <span style={{ marginLeft: '10px' }} className="Rating">
                   {' '}
                   4.5{' '}
@@ -78,7 +78,7 @@ const HomeScreen = () => {
               <img src={ResumeTem}></img>
 
               <p className="Template_Type">
-                Basic
+                Advance
                 <span style={{ marginLeft: '10px' }} className="Rating">
                   {' '}
                   4.5{' '}
