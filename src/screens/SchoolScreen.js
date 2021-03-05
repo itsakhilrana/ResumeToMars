@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import {SCHOOl_DETAILS } from '../constants/resumeConstants'
+import { SCHOOl_DETAILS } from '../constants/resumeConstants'
 import './SchoolScreen.css'
 
 const SchoolScreen = ({ history }) => {
@@ -8,6 +8,7 @@ const SchoolScreen = ({ history }) => {
   const [school, setschool] = useState('')
   const [board, setboard] = useState('')
   const [completion, setcompletion] = useState('')
+  const [check, setCheck] = useState('')
 
   const dispatch = useDispatch()
 
@@ -19,6 +20,14 @@ const SchoolScreen = ({ history }) => {
   }
 
   useEffect(() => {
+    const personalDetails = localStorage.getItem('personalDetails')
+      ? JSON.parse(localStorage.getItem('personalDetails'))
+      : {}
+
+    const { redirect } = personalDetails
+
+    setCheck(redirect)
+
     const schoolDetails = localStorage.getItem('schoolDetails')
       ? JSON.parse(localStorage.getItem('schoolDetails'))
       : {}
@@ -34,7 +43,16 @@ const SchoolScreen = ({ history }) => {
 
     dispatch({ type: SCHOOl_DETAILS, payload: details })
     localStorage.setItem('schoolDetails', JSON.stringify(details))
-    history.push('/trainings')
+
+    if (check === 'intermidiate') {
+
+      history.push('/achievement')
+
+    } else {
+
+      history.push('/trainings')
+
+    }
   }
 
   const previousHandler = () => {

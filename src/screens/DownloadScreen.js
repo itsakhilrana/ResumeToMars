@@ -63,6 +63,7 @@ const DownloadScreen = ({ history }) => {
     localStorage.removeItem('schoolDetails')
     localStorage.removeItem('trainingDetails')
     localStorage.removeItem('projectDetails')
+    localStorage.removeItem('achievementsDetails')
     dispatch({ type: RESET_DETAILS })
     history.push('/')
   }

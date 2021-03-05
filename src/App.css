@@ -18,6 +18,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
+  position: fixed;
 }
 
 
@@ -35,5 +36,6 @@
     color: white;
     margin-left: 10px;
     font-weight: 700;
+    position: fixed;
   }
 }

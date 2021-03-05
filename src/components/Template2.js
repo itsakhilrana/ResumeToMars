@@ -128,22 +128,30 @@ const styles = StyleSheet.create({
 })
 
 const Template2 = () => {
-
-  
-
   const personalDetails = localStorage.getItem('personalDetails')
     ? JSON.parse(localStorage.getItem('personalDetails'))
     : {}
   const { name, email, about, phoneNo, profession } = personalDetails
 
+  const trainingDetails = localStorage.getItem('trainingDetails')
+    ? JSON.parse(localStorage.getItem('trainingDetails'))
+    : {}
+  const {
+    company,
+    jobtitle,
+    startDate,
+    endDate,
+    about: aboutJob,
+    company2,
+    jobtitle2,
+    startDate2,
+    endDate2,
+    about2: aboutJob2,
+  } = trainingDetails
+
   const projectDetails = localStorage.getItem('projectDetails')
     ? JSON.parse(localStorage.getItem('projectDetails'))
     : {}
-
-    const trainingDetails = localStorage.getItem('trainingDetails')
-    ? JSON.parse(localStorage.getItem('trainingDetails'))
-    : {}
-  const {company, jobtitle, startDate, endDate, about:aboutJob} = trainingDetails
 
   const {
     projectName,
@@ -151,19 +159,19 @@ const Template2 = () => {
     projectLink,
     projectName2,
     projectDescription2,
-    projectLink2,
+    projectLink2,skills
   } = projectDetails
 
-  const {projectDetails:p} = localStorage.getItem('projectDetails')
-  ? JSON.parse(localStorage.getItem('projectDetails'))
-  : {}
-const {skills} = p 
+  const achievementsDetails = localStorage.getItem('achievementsDetails')
+    ? JSON.parse(localStorage.getItem('achievementsDetails'))
+    : {}
 
-const educationDetails = localStorage.getItem('educationDetails')
+    const {achievement1, achievement2, achievement3} = achievementsDetails
+
+  const educationDetails = localStorage.getItem('educationDetails')
     ? JSON.parse(localStorage.getItem('educationDetails'))
     : {}
-  const { degree, college, cgpa, endDate:educationendDate } = educationDetails
- 
+  const { degree, college, cgpa, endDate: educationendDate } = educationDetails
 
   return (
     <View style={styles.Template2}>
@@ -192,7 +200,7 @@ const educationDetails = localStorage.getItem('educationDetails')
 
                 <Text style={styles.aboutProject}>{projectDescription2}</Text>
               </View>
-              
+
               {/* <View style={styles.projectContainer}>
                 <Text style={styles.projectName}>SoundBee</Text>
                 <Text style={styles.aboutProject}>
@@ -222,14 +230,16 @@ const educationDetails = localStorage.getItem('educationDetails')
             <View>
               <View style={styles.projectContainer}>
                 <Text style={styles.projectName}>{jobtitle}</Text>
-                <Text style={styles.company}>
-                  {company}
-                </Text>
-                <Text style={styles.aboutProject}>
-                  {aboutJob}
-                </Text>
+                <Text style={styles.company}>{company}</Text>
+                <Text style={styles.aboutProject}>{aboutJob}</Text>
               </View>
-              
+
+              <View style={styles.projectContainer}>
+                <Text style={styles.projectName}>{jobtitle2}</Text>
+                <Text style={styles.company}>{company2}</Text>
+                <Text style={styles.aboutProject}>{aboutJob2}</Text>
+              </View>
+
               {/* <View style={styles.projectContainer}>
                 <Text style={styles.projectName}>{jobtitle}</Text>
                 <Text style={styles.company}>
@@ -263,9 +273,7 @@ const educationDetails = localStorage.getItem('educationDetails')
             <View style={styles.projectBlock}>
               <Text style={styles.project}>SKILLS</Text>
               <View style={styles.projectContainer2}>
-                <Text style={styles.skillName}>
-                  {skills}
-                </Text>
+                <Text style={styles.skillName}>{skills}</Text>
               </View>
             </View>
 
@@ -274,13 +282,13 @@ const educationDetails = localStorage.getItem('educationDetails')
               <Text style={styles.project}>ACHIEVEMENTS</Text>
               <View style={styles.projectContainer2}>
                 <Text style={styles.achievementList}>
-                  aaass asasd dsds fdfd dfd dfdf dfdf dfdf
+                  {achievement1}
                 </Text>
                 <Text style={styles.achievementList}>
-                  aaass asasd dsds fdfd dfd dfdf dfdf dfdf
+                  {achievement2}
                 </Text>
                 <Text style={styles.achievementList}>
-                  aaass asasd dsds fdfd dfd dfdf dfdf dfdf
+                  {achievement3}
                 </Text>
               </View>
             </View>
@@ -289,14 +297,14 @@ const educationDetails = localStorage.getItem('educationDetails')
             <View style={styles.projectBlock}>
               <Text style={styles.project}>EDUCATION</Text>
               <View style={styles.projectContainer2}>
-                <Text style={styles.degree}>
-                  {degree}
+                <Text style={styles.degree}>{degree}</Text>
+                <Text style={styles.clgName}>{college}</Text>
+                <Text style={styles.date}>
+                  {educationendDate
+                    ? `(Expected graduation ${educationendDate})`
+                    : ''}
                 </Text>
-                <Text style={styles.clgName}>
-                  {college}
-                </Text>
-                <Text style={styles.date}>{educationendDate? `(Expected graduation ${educationendDate})` : ''}</Text>
-                <Text style={styles.cgpa}>{cgpa ? `CGPA: ${cgpa}`: ""}</Text>
+                <Text style={styles.cgpa}>{cgpa ? `CGPA: ${cgpa}` : ''}</Text>
               </View>
             </View>
           </View>

@@ -5,11 +5,18 @@ import './Trainings.css'
 const Trainings = ({ history }) => {
   const [company, setCompany] = useState('')
   const [jobtitle, setJobTitle] = useState('')
-
   const [startDate, setstartDate] = useState('')
   const [endDate, setendDate] = useState('')
   const [about, setAbout] = useState('')
+
+  const [company2, setCompany2] = useState('')
+  const [jobtitle2, setJobTitle2] = useState('')
+  const [startDate2, setstartDate2] = useState('')
+  const [endDate2, setendDate2] = useState('')
+  const [about2, setAbout2] = useState('')
+
   const [anotherExp, setanotherExp] = useState('')
+  const [check, setCheck] = useState('')
   const [toggle, setToggle] = useState(false)
   console.log(toggle)
   const dispatch = useDispatch()
@@ -20,6 +27,11 @@ const Trainings = ({ history }) => {
     startDate,
     endDate,
     about,
+    company2,
+    jobtitle2,
+    startDate2,
+    endDate2,
+    about2,
   }
 
   useEffect(() => {
@@ -29,6 +41,7 @@ const Trainings = ({ history }) => {
 
     const { redirect } = personalDetails
     setanotherExp(redirect)
+    setCheck(redirect)
 
     const trainingDetails = localStorage.getItem('trainingDetails')
       ? JSON.parse(localStorage.getItem('trainingDetails'))
@@ -39,6 +52,12 @@ const Trainings = ({ history }) => {
     setstartDate(trainingDetails.startDate)
     setendDate(trainingDetails.endDate)
     setAbout(trainingDetails.about)
+
+    setCompany2(trainingDetails.company2)
+    setJobTitle2(trainingDetails.jobtitle2)
+    setstartDate2(trainingDetails.startDate2)
+    setendDate2(trainingDetails.endDate2)
+    setAbout2(trainingDetails.about2)
   }, [])
 
   const submitHandler = (e) => {
@@ -52,55 +71,14 @@ const Trainings = ({ history }) => {
   }
 
   const previousHandler = () => {
-    history.push('/school')
+    console.log(check)
+    if (check === 'intermidiate') {
+      return history.push('/achievement')
+    } else {
+      history.push('/school')
+    }
   }
 
-  const AddAnotherExpHandler = () => {
-    return (
-      <>
-        <label>Company</label>
-        <input
-          type="text"
-          value={company}
-          placeholder="Google"
-          onChange={(e) => setCompany(e.target.value)}
-        ></input>
-        <br></br>
-        <label>Job Title</label>
-        <input
-          type="text"
-          value={jobtitle}
-          placeholder="CEO"
-          onChange={(e) => setJobTitle(e.target.value)}
-        ></input>
-        <br></br>
-        <label>Start Month & Year</label>
-        <input
-          type="text"
-          value={startDate}
-          placeholder="Jun 2017"
-          onChange={(e) => setstartDate(e.target.value)}
-        ></input>
-        <br></br>
-        <label>End Month & Year</label>
-        <input
-          type="text"
-          value={endDate}
-          placeholder="Jul 2018"
-          onChange={(e) => setendDate(e.target.value)}
-        ></input>
-        <br></br>
-        <label>Learning Experience</label>
-        <input
-          type="text"
-          value={about}
-          placeholder="Write about your experience..."
-          onChange={(e) => setAbout(e.target.value)}
-        ></input>
-        <br></br>
-      </>
-    )
-  }
   return (
     <div className="TrainingScreen">
       <div className="Training_Info">
@@ -152,11 +130,23 @@ const Trainings = ({ history }) => {
               {anotherExp && anotherExp === 'intermidiate' ? (
                 <div onClick={() => setToggle(!toggle)}>
                   {toggle ? (
-                    <div style={{ color: 'red', fontSize: '14px', textAlign:"end" }}>
+                    <div
+                      style={{
+                        color: 'red',
+                        fontSize: '14px',
+                        textAlign: 'end',
+                      }}
+                    >
                       Remove Experience
                     </div>
                   ) : (
-                    <div style={{ color: 'white', fontSize: '14px',textAlign:"end" }}>
+                    <div
+                      style={{
+                        color: 'white',
+                        fontSize: '14px',
+                        textAlign: 'end',
+                      }}
+                    >
                       Add Another Experience
                     </div>
                   )}
@@ -164,7 +154,51 @@ const Trainings = ({ history }) => {
               ) : null}
             </div>
             <div className="Training2">
-              {toggle ? <AddAnotherExpHandler></AddAnotherExpHandler> : null}
+              
+              {toggle ? (
+                <>
+                  <label>Company</label>
+                  <input
+                    type="text"
+                    value={company2}
+                    placeholder="Google"
+                    onChange={(e) => setCompany2(e.target.value)}
+                  ></input>
+                  <br></br>
+                  <label>Job Title</label>
+                  <input
+                    type="text"
+                    value={jobtitle2}
+                    placeholder="CEO"
+                    onChange={(e) => setJobTitle2(e.target.value)}
+                  ></input>
+                  <br></br>
+                  <label>Start Month & Year</label>
+                  <input
+                    type="text"
+                    value={startDate2}
+                    placeholder="Jun 2017"
+                    onChange={(e) => setstartDate2(e.target.value)}
+                  ></input>
+                  <br></br>
+                  <label>End Month & Year</label>
+                  <input
+                    type="text"
+                    value={endDate2}
+                    placeholder="Jul 2018"
+                    onChange={(e) => setendDate2(e.target.value)}
+                  ></input>
+                  <br></br>
+                  <label>Learning Experience</label>
+                  <input
+                    type="text"
+                    value={about2}
+                    placeholder="Write about your experience..."
+                    onChange={(e) => setAbout2(e.target.value)}
+                  ></input>
+                  <br></br>
+                </>
+              ) : null}
             </div>
           </div>
 

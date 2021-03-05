@@ -9,6 +9,7 @@ import EducationScreen from './screens/EducationScreen'
 import SchoolScreen from './screens/SchoolScreen'
 import TrainingScreen from './screens/Trainings'
 import ProjectScreen from './screens/ProjectScreen'
+import AchievementScreen from './screens/Achievement'
 
 import {
   PDFDownloadLink,
@@ -90,6 +91,7 @@ function App() {
         <Route path="/education" component={EducationScreen}></Route>
         <Route path="/trainings" component={TrainingScreen}></Route>
         <Route path="/skillsnproject" component={ProjectScreen}></Route>
+        <Route path="/achievement" component={AchievementScreen}></Route>
         <Route path="/school" component={SchoolScreen}></Route>
         <Route component={HomeScreen}></Route>
       </Switch>
