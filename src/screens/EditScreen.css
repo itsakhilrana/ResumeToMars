@@ -114,6 +114,7 @@ select:focus {
 
 @media only screen and (max-width: 414px) {
   .EditScreen {
+    
     padding-top: 0px;
     padding-top: 0px;
     display: inline;
@@ -121,18 +122,69 @@ select:focus {
   .Personal_Info {
     padding-top: 80px;
     display: inline-block;
-    height: 700px;
+    height: 800px;
   }
 
   .Personal_Info p {
-    font-size: 50px;
+    font-size: 35px;
     font-weight: 700;
     color: white;
-    width: 200px;
+    width: 250px;
     margin-right: 0px;
   }
 
   .Form {
     margin-top: 40px;
   }
+
+
+  label {
+  
+    text-align: left;
+    display: block;
+    margin-bottom: 0px;
+  
+    color: rgba(255, 255, 255, 0.63);
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .Form input {
+    color: rgb(255, 255, 255);
+    width: 380px;
+    height: 50px;
+    padding: 5px 5px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgba(255, 254, 254, 0.123);
+    
+  }
+  
+  .Form button {
+    margin-top: 15px;
+    height: 50px;
+    width: 380px;
+    font-weight: 700;
+    border-radius: 20px;
+    border: none;
+    letter-spacing: 1px;
+    background-color: rgba(253, 253, 253, 0.466);
+  }
+  
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+  }
+  
+  .Form button:hover {
+    border: none;
+    background-color: rgb(204, 197, 197);
+    outline: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  
 }

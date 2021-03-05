@@ -29,14 +29,14 @@
     .Training_Info {
       padding-top: 80px;
     display: inline-block;
-    height: 700px;
+    height: 800px;
     }
   
     .Training_Info p {
-      font-size: 50px;
+      font-size: 35px;
       font-weight: 700;
       color: white;
-      width: 200px;
+      width: 250px;
       margin-right: 100px;
     }
   }
