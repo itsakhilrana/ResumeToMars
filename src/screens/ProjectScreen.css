@@ -1,65 +1,67 @@
-.ProjectScreen{
-    height: 580px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.ProjectScreen {
+  height: 580px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Project_Info {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Project_Info p {
+  font-size: 50px;
+  font-weight: 700;
+  color: white;
+  margin-right: 100px;
+  width: 200px;
+}
+
+.Project_Label {
+  margin-bottom: 20px;
+  color: white;
+  font-weight: 700;
+}
+
+.Project_Container {
+  display: flex;
+}
+.Project1 {
+  margin-right: 50px;
+}
+
+@media only screen and (max-width: 414px) {
+  .ProjectScreen {
+    padding-top: 0px;
+    padding-top: 0px;
+    display: inline;
   }
 
-.Project_Info p{
+  .Project_Info {
+    padding-top: 80px;
+    display: inline-block;
+    height: 900px;
+  }
+
+  .Project_Info p {
     font-size: 50px;
     font-weight: 700;
     color: white;
-    margin-right: 100px;
     width: 200px;
-}
-
-.Project_Label{
-  width: 200px;
-  height: 40px;
-  
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  background-color: white;
-  border-radius: 20px;
-}
-
-
-@media only screen and (max-width: 414px) {
-    .ProjectScreen {
-      padding-top: 0px;
-    padding-top: 0px;
-    display: inline;
-    }
-  
-    .Project_Info {
-      padding-top: 80px;
-    display: inline-block;
-    height: 900px;
-    }
-  
-    .Project_Info p {
-      font-size: 50px;
-      font-weight: 700;
-      color: white;
-      width: 200px;
-      margin-right: 100px;
-    }
-
-    .Project_Label{
-      width: 200px;
-      height: 40px;
-      font-size: "14px";
-      justify-content: center;
-      display: flex;
-      align-items: center;
-      background-color: white;
-      margin: 20px 0px;
-      
-    }
+    margin-right: 100px;
   }
+
+  .Project_Label {
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 700;
+  }
+
+  .Project_Container {
+    display: inline-block;
+  }
+  .Project1 {
+    margin-right: 0px;
+  }
+}

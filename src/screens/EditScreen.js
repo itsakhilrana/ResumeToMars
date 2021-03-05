@@ -57,39 +57,43 @@ const Edit = ({ history, location }) => {
 
         <form className="Form" onSubmit={submitHandler}>
 
-         
+         <label>Full Name</label>
           <input
             type="text"
             value={name}
-            placeholder="Full Name"
+            placeholder="Sundar Pichai"
             onChange={(e) => setName(e.target.value)}
           ></input>
           <br></br>
+          <label>Email</label>
           <input
             type="text"
             value={email}
-            placeholder="Email"
+            placeholder="sundarpichai@gmail.com"
             onChange={(e) => setEmail(e.target.value)}
           ></input>
           <br></br>
+          <label>Phone No.</label>
           <input
             type="text"
             value={phoneNo}
-            placeholder="Phone No."
+            placeholder="8967543XXX"
             onChange={(e) => setphoneNo(e.target.value)}
           ></input>
           <br></br>
+          <label>Profession</label>
           <input
             type="text"
             value={profession}
-            placeholder="Profession"
+            placeholder="Chief executive officer"
             onChange={(e) => setProfession(e.target.value)}
           ></input>
           <br></br>
+          <label>About</label>
           <input
             type="text"
             value={about}
-            placeholder="Summary"
+            placeholder="About you..."
             onChange={(e) => setAbout(e.target.value)}
           ></input>
           <br></br>

@@ -3,7 +3,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .Personal_Info {
@@ -32,31 +31,42 @@
   letter-spacing: 1px;
 }
 
-.Option{
+.Option {
   color: #202327;
 }
 
+label {
+  
+  text-align: left;
+  display: block;
+  margin-bottom: 0px;
+
+  color: rgba(255, 255, 255, 0.63);
+  font-size: 14px;
+  font-weight: 300;
+}
+
 .Form input {
-  color: white;
+  color: rgb(255, 255, 255);
   width: 380px;
-  padding: 5px 0px;
+  height: 30px;
+  padding: 5px 5px;
   margin: 15px 0;
   box-sizing: border-box;
   border: none;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.651);
-  background-color: transparent;
-
-  letter-spacing: 1px;
+  background-color: rgba(255, 254, 254, 0.123);
+  
 }
 
 .Form button {
   margin-top: 15px;
-  height: 40px;
+  height: 30px;
   width: 380px;
   font-weight: 700;
   border-radius: 20px;
   border: none;
   letter-spacing: 1px;
+  background-color: rgba(253, 253, 253, 0.466);
 }
 
 input:focus,
@@ -99,6 +109,8 @@ select:focus {
   color: black;
   border-radius: 10px;
 }
+
+
 
 @media only screen and (max-width: 414px) {
   .EditScreen {

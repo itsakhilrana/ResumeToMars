@@ -71,24 +71,27 @@ const EducationScreen = ({ history }) => {
 
           </select>
           <br></br>
+          <label>College</label>
           <input
             type="text"
             value={college}
-            placeholder="College"
+            placeholder="University of Pennsylvania"
             onChange={(e) => setcollege(e.target.value)}
           ></input>
           <br></br>
+          <label>CGPA</label>
           <input
             type="text"
             value={cgpa}
-            placeholder="CGPA"
+            placeholder="9.8"
             onChange={(e) => setCgpa(e.target.value)}
           ></input>
           <br></br>
+          <label>Expected Graduation</label>
           <input
             type="text"
             value={endDate}
-            placeholder="Expected Graduation"
+            placeholder="2021 Jun"
             onChange={(e) => setEndDate(e.target.value)}
           ></input>
           <br></br>

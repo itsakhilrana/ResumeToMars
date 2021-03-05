@@ -46,12 +46,12 @@ const DownloadScreen = ({ history }) => {
     <Provider store={store}>
       <Document>
         <Page size="A4" style={styles.page}>
-          <Template2></Template2>
-          {/* {redirect === 'basic' ? (
+          {/* <Template2></Template2> */}
+          {redirect === 'basic' ? (
             <Template1></Template1>
           ) : (
             <Template2></Template2>
-          )} */}
+          )}
         </Page>
       </Document>
     </Provider>
@@ -69,10 +69,10 @@ const DownloadScreen = ({ history }) => {
 
   return (
     <div className="DownloadScreen">
-      <PDFViewer style={styles.pdfViewer}>
+      {/* <PDFViewer style={styles.pdfViewer}>
             <MyDoc></MyDoc>
-          </PDFViewer>
-      {/* <div className="Download_Info">
+          </PDFViewer> */}
+      <div className="Download_Info">
         <img src={onmars}></img>
         <div>
           <p>Hurray! You're on Mars!</p>
@@ -95,7 +95,7 @@ const DownloadScreen = ({ history }) => {
             }
           </PDFDownloadLink>
         </div>
-      </div> */}
+      </div>
     </div>
   )
 }

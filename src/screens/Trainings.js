@@ -52,38 +52,43 @@ const Trainings = ({ history }) => {
         <p>Your Training Experience</p>
 
         <form className="Form" onSubmit={submitHandler}>
+          <label>Company</label>
           <input
             type="text"
             value={company}
-            placeholder="Company Name"
+            placeholder="Google"
             onChange={(e) => setCompany(e.target.value)}
           ></input>
           <br></br>
+          <label>Job Title</label>
           <input
             type="text"
             value={jobtitle}
-            placeholder="Job Title"
+            placeholder="CEO"
             onChange={(e) => setJobTitle(e.target.value)}
           ></input>
           <br></br>
+          <label>Start Month & Year</label>
           <input
             type="text"
             value={startDate}
-            placeholder="Start Month & Year"
+            placeholder="Jun 2017"
             onChange={(e) => setstartDate(e.target.value)}
           ></input>
           <br></br>
+          <label>End Month & Year</label>
           <input
             type="text"
             value={endDate}
-            placeholder="End Month & Year"
+            placeholder="Jul 2018"
             onChange={(e) => setendDate(e.target.value)}
           ></input>
           <br></br>
+          <label>Learning Experience</label>
           <input
             type="text"
             value={about}
-            placeholder="Learning Experience"
+            placeholder="Write about your experience..."
             onChange={(e) => setAbout(e.target.value)}
           ></input>
           <br></br>

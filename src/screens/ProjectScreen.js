@@ -58,60 +58,76 @@ const ProjectScreen = ({ history }) => {
         <p>Your Skills & Projects</p>
 
         <form className="Form" onSubmit={submitHandler}>
-          
-         
-          <div className="Project_Label"><span>First Project Details</span></div>
-          <input
-            type="text"
-            value={projectName}
-            placeholder="Project Name"
-            onChange={(e) => setprojectName(e.target.value)}
-          ></input>
-          <br></br>
-          <input
-            type="text"
-            value={projectDescription}
-            placeholder="Project Description"
-            onChange={(e) => setprojectDescription(e.target.value)}
-          ></input>
-          <br></br>
-          <input
-            type="text"
-            value={projectLink}
-            placeholder="Project Link"
-            onChange={(e) => setprojectLink(e.target.value)}
-          ></input>
-          <br></br>
-          <div><span className="Project_Label">Second Project Details</span></div>
-          <input
-            type="text"
-            value={projectName2}
-            placeholder="Project Name"
-            onChange={(e) => setprojectName2(e.target.value)}
-          ></input>
-          <br></br>
-          <input
-            type="text"
-            value={projectDescription2}
-            placeholder="Project Description"
-            onChange={(e) => setprojectDescription2(e.target.value)}
-          ></input>
-          <br></br>
-          <input
-            type="text"
-            value={projectLink2}
-            placeholder="Project Link"
-            onChange={(e) => setprojectLink2(e.target.value)}
-          ></input>
-          <br></br>
-          <input
-            type="text"
-            value={skills}
-            placeholder="Skill - Java, Python, C++ & more."
-            onChange={(e) => setSkills(e.target.value)}
-          ></input>
+          <div className="Project_Container">
+            <div className="Project1">
+              <div className="Project_Label">
+                <span>First Project Details</span>
+              </div>
+              <label>Project Name</label>
+              <input
+                type="text"
+                value={projectName}
+                placeholder="Google AI"
+                onChange={(e) => setprojectName(e.target.value)}
+              ></input>
+              <br></br>
+              <label>Project Description</label>
+              <input
+                type="text"
+                value={projectDescription}
+                placeholder="About your project..."
+                onChange={(e) => setprojectDescription(e.target.value)}
+              ></input>
+              <br></br>
+              <label>Project Link</label>
+              <input
+                type="text"
+                value={projectLink}
+                placeholder="https://"
+                onChange={(e) => setprojectLink(e.target.value)}
+              ></input>
+              <br></br>
+            </div>
+            <div className="Proejct2">
+            <div className="Project_Label">
+                <span>Second Project Details</span>
+              </div>
+              <label>Project Name</label>
+              <input
+                type="text"
+                value={projectName2}
+                placeholder="Google Map"
+                onChange={(e) => setprojectName2(e.target.value)}
+              ></input>
+              <br></br>
+              <label>Project Description</label>
+              <input
+                type="text"
+                value={projectDescription2}
+                placeholder="About your project..."
+                onChange={(e) => setprojectDescription2(e.target.value)}
+              ></input>
+              <br></br>
+              <label>Project Link</label>
+              <input
+                type="text"
+                value={projectLink2}
+                placeholder="https://"
+                onChange={(e) => setprojectLink2(e.target.value)}
+              ></input>
+              <br></br>
+              <label>Skills</label>
+              <input
+                type="text"
+                value={skills}
+                placeholder="Java, Python, C++ & more."
+                onChange={(e) => setSkills(e.target.value)}
+              ></input>
 
-          <br></br>
+              <br></br>
+            </div>
+          </div>
+
           <div className="btn_div">
             <button onClick={previousHandler}>Previous</button>
             <button type="submit">Next</button>

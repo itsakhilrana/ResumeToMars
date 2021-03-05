@@ -7,10 +7,10 @@ const styles = StyleSheet.create({
     paddingLeft: 40,
     paddingRight: 40,
     paddingBottom: 45,
-    backgroundColor: '#1e2126',
+    backgroundColor: 'white',
     height: '100%',
     flexDirection: 'row',
-    color: 'white',
+    color: '#1e2126',
   },
   left: {
     flexDirection: 'column',
@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     width: '170px',
     // backgroundColor: 'red',
-    height: '500px',
-    marginLeft: 30,
+    
+    marginLeft: 10,
   },
   header: {
     flexDirection: 'column',
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Roboto light',
   },
   divider: {
-    height: '85%',
+    marginRight:"25px",
     width: '1px',
     backgroundColor: '#A6A6A6',
   },
@@ -117,6 +117,13 @@ const styles = StyleSheet.create({
   },
   row:{
     flexDirection:"row"
+  },
+  rightContainer:{
+    flexDirection:"row"
+  },
+  rightBlocks:{
+    flexDirection:"column",
+    paddingBottom:"20px"
   }
 })
 
@@ -211,11 +218,14 @@ const Template2 = () => {
         </View>
       </View>
 
-      <View style={styles.divider}></View>
+      
       {/* Right Column */}
       <View style={styles.right}>
         {/* Contact */}
-
+        
+        <View style={styles.rightContainer}>
+        <View style={styles.divider}></View>
+        <View style={styles.rightBlocks}>
         <View style={styles.projectBlock}>
           <Text style={styles.project}>CONTACT</Text>
           <View style={styles.projectContainer2}>
@@ -261,6 +271,8 @@ const Template2 = () => {
             <Text style={styles.date}>(Expected graduation Jun 2021)</Text>
             <Text style={styles.cgpa}>CGPA: 7.2</Text>
           </View>
+        </View>
+        </View>
         </View>
       </View>
     </View>

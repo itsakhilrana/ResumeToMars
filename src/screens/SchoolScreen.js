@@ -68,24 +68,27 @@ const SchoolScreen = ({ history }) => {
             </option>
           </select>
           <br></br>
+          <label>School</label>
           <input
             type="text"
             value={school}
-            placeholder="School"
+            placeholder="Wharton School "
             onChange={(e) => setschool(e.target.value)}
           ></input>
           <br></br>
+          <label>Board</label>
           <input
             type="text"
             value={board}
-            placeholder="Board"
+            placeholder="CBSE"
             onChange={(e) => setboard(e.target.value)}
           ></input>
           <br></br>
+          <label>Year of Completion</label>
           <input
             type="text"
             value={completion}
-            placeholder="Year of Completion"
+            placeholder="2017"
             onChange={(e) => setcompletion(e.target.value)}
           ></input>
           <br></br>
