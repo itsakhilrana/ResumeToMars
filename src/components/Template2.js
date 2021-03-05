@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     width: '170px',
     // backgroundColor: 'red',
-    
+
     marginLeft: 10,
   },
   header: {
@@ -105,73 +105,102 @@ const styles = StyleSheet.create({
     fontFamily: 'Roboto light',
   },
   divider: {
-    marginRight:"25px",
+    marginRight: '25px',
     width: '1px',
     backgroundColor: '#A6A6A6',
   },
-  line:{
-    height:"100%",
-    width:"1px",
-    backgroundColor:"#A6A6A6",
-    marginTop:"15px"
+  line: {
+    height: '100%',
+    width: '1px',
+    backgroundColor: '#A6A6A6',
+    marginTop: '15px',
   },
-  row:{
-    flexDirection:"row"
+  row: {
+    flexDirection: 'row',
   },
-  rightContainer:{
-    flexDirection:"row"
+  rightContainer: {
+    flexDirection: 'row',
   },
-  rightBlocks:{
-    flexDirection:"column",
-    paddingBottom:"20px"
-  }
+  rightBlocks: {
+    flexDirection: 'column',
+    paddingBottom: '20px',
+  },
 })
 
 const Template2 = () => {
+
+  
+
+  const personalDetails = localStorage.getItem('personalDetails')
+    ? JSON.parse(localStorage.getItem('personalDetails'))
+    : {}
+  const { name, email, about, phoneNo, profession } = personalDetails
+
+  const projectDetails = localStorage.getItem('projectDetails')
+    ? JSON.parse(localStorage.getItem('projectDetails'))
+    : {}
+
+    const trainingDetails = localStorage.getItem('trainingDetails')
+    ? JSON.parse(localStorage.getItem('trainingDetails'))
+    : {}
+  const {company, jobtitle, startDate, endDate, about:aboutJob} = trainingDetails
+
+  const {
+    projectName,
+    projectDescription,
+    projectLink,
+    projectName2,
+    projectDescription2,
+    projectLink2,
+  } = projectDetails
+
+  const {projectDetails:p} = localStorage.getItem('projectDetails')
+  ? JSON.parse(localStorage.getItem('projectDetails'))
+  : {}
+const {skills} = p 
+
+const educationDetails = localStorage.getItem('educationDetails')
+    ? JSON.parse(localStorage.getItem('educationDetails'))
+    : {}
+  const { degree, college, cgpa, endDate:educationendDate } = educationDetails
+ 
+
   return (
     <View style={styles.Template2}>
       <View style={styles.left}>
         {/* Header */}
         <View style={styles.header}>
-          <Text style={styles.name}>Elon Musk</Text>
-          <Text style={styles.userProfession}>Developer & Designer</Text>
-          <Text style={styles.userPunch}>
-            Self-motivated, highly passionate and hardworking fresher looking
-            for an opportunity to work.
-          </Text>
+          <Text style={styles.name}>{name}</Text>
+          <Text style={styles.userProfession}>{profession}</Text>
+          <Text style={styles.userPunch}>{about}</Text>
         </View>
         <Text></Text>
 
         {/* Projects */}
         <View style={styles.projectBlock}>
           <Text style={styles.project}>PROJECTS</Text>
-          <View style={styles.row} >
+          <View style={styles.row}>
             <View style={styles.line}></View>
             <View>
               <View style={styles.projectContainer}>
-                <Text style={styles.projectName}>SoundBee</Text>
-                <Text style={styles.aboutProject}>
-                  Advance Calculator is my jrst probect, motive to kuild to
-                  kuild to enhance my s'ills. During this probect, I learned the
-                  fundamentals of programming language.
-                </Text>
+                <Text style={styles.projectName}>{projectName}</Text>
+
+                <Text style={styles.aboutProject}>{projectDescription}</Text>
               </View>
               <View style={styles.projectContainer}>
+                <Text style={styles.projectName}>{projectName2}</Text>
+
+                <Text style={styles.aboutProject}>{projectDescription2}</Text>
+              </View>
+              
+              {/* <View style={styles.projectContainer}>
                 <Text style={styles.projectName}>SoundBee</Text>
                 <Text style={styles.aboutProject}>
                   Advance Calculator is my jrst probect, motive to kuild to
                   kuild to enhance my s'ills. During this probect, I learned the
                   fundamentals of programming language.
                 </Text>
-              </View>
-              <View style={styles.projectContainer}>
-                <Text style={styles.projectName}>SoundBee</Text>
-                <Text style={styles.aboutProject}>
-                  Advance Calculator is my jrst probect, motive to kuild to
-                  kuild to enhance my s'ills. During this probect, I learned the
-                  fundamentals of programming language.
-                </Text>
-              </View>
+              </View> */}
             </View>
           </View>
         </View>
@@ -188,91 +217,89 @@ const Template2 = () => {
         {/* Experience */}
         <View style={styles.projectBlock}>
           <Text style={styles.project}>EXPERIENCE</Text>
-          <View style={styles.row} >
+          <View style={styles.row}>
             <View style={styles.line}></View>
             <View>
-            <View style={styles.projectContainer}>
-            <Text style={styles.projectName}>Python Intern</Text>
-            <Text style={styles.company}>
-              A&H Software Solutions, Chandigarh
-            </Text>
-            <Text style={styles.aboutProject}>
-              During this training, I learned Python programming language from
-              scratch. It was a nice experience for me as, I am passionate and
-              curious to learn new things.
-            </Text>
-          </View>
-          <View style={styles.projectContainer}>
-            <Text style={styles.projectName}>Python Intern</Text>
-            <Text style={styles.company}>
-              A&H Software Solutions, Chandigarh
-            </Text>
-            <Text style={styles.aboutProject}>
-              During this training, I learned Python programming language from
-              scratch. It was a nice experience for me as, I am passionate and
-              curious to learn new things.
-            </Text>
-          </View>
+              <View style={styles.projectContainer}>
+                <Text style={styles.projectName}>{jobtitle}</Text>
+                <Text style={styles.company}>
+                  {company}
+                </Text>
+                <Text style={styles.aboutProject}>
+                  {aboutJob}
+                </Text>
+              </View>
+              
+              {/* <View style={styles.projectContainer}>
+                <Text style={styles.projectName}>{jobtitle}</Text>
+                <Text style={styles.company}>
+                  {company}
+                </Text>
+                <Text style={styles.aboutProject}>
+                  {about}
+                </Text>
+              </View> */}
             </View>
-            </View>
+          </View>
         </View>
       </View>
 
-      
       {/* Right Column */}
       <View style={styles.right}>
         {/* Contact */}
-        
+
         <View style={styles.rightContainer}>
-        <View style={styles.divider}></View>
-        <View style={styles.rightBlocks}>
-        <View style={styles.projectBlock}>
-          <Text style={styles.project}>CONTACT</Text>
-          <View style={styles.projectContainer2}>
-            <Text style={styles.contactInfo}>email@gmail.com</Text>
-            <Text style={styles.contactInfo}>+91 9041244532</Text>
-          </View>
-        </View>
+          <View style={styles.divider}></View>
+          <View style={styles.rightBlocks}>
+            <View style={styles.projectBlock}>
+              <Text style={styles.project}>CONTACT</Text>
+              <View style={styles.projectContainer2}>
+                <Text style={styles.contactInfo}>{email}</Text>
+                <Text style={styles.contactInfo}>+91 {phoneNo}</Text>
+              </View>
+            </View>
 
-        {/* Skills */}
-        <View style={styles.projectBlock}>
-          <Text style={styles.project}>SKILLS</Text>
-          <View style={styles.projectContainer2}>
-            <Text style={styles.skillName}>Java Python C++ Dart Django</Text>
-          </View>
-        </View>
+            {/* Skills */}
+            <View style={styles.projectBlock}>
+              <Text style={styles.project}>SKILLS</Text>
+              <View style={styles.projectContainer2}>
+                <Text style={styles.skillName}>
+                  {skills}
+                </Text>
+              </View>
+            </View>
 
-        {/* Achievements */}
-        <View style={styles.projectBlock}>
-          <Text style={styles.project}>ACHIEVEMENTS</Text>
-          <View style={styles.projectContainer2}>
-            <Text style={styles.achievementList}>
-              aaass asasd dsds fdfd dfd dfdf dfdf dfdf
-            </Text>
-            <Text style={styles.achievementList}>
-              aaass asasd dsds fdfd dfd dfdf dfdf dfdf
-            </Text>
-            <Text style={styles.achievementList}>
-              aaass asasd dsds fdfd dfd dfdf dfdf dfdf
-            </Text>
-          </View>
-        </View>
+            {/* Achievements */}
+            <View style={styles.projectBlock}>
+              <Text style={styles.project}>ACHIEVEMENTS</Text>
+              <View style={styles.projectContainer2}>
+                <Text style={styles.achievementList}>
+                  aaass asasd dsds fdfd dfd dfdf dfdf dfdf
+                </Text>
+                <Text style={styles.achievementList}>
+                  aaass asasd dsds fdfd dfd dfdf dfdf dfdf
+                </Text>
+                <Text style={styles.achievementList}>
+                  aaass asasd dsds fdfd dfd dfdf dfdf dfdf
+                </Text>
+              </View>
+            </View>
 
-        {/* Education */}
-        <View style={styles.projectBlock}>
-          <Text style={styles.project}>EDUCATION</Text>
-          <View style={styles.projectContainer2}>
-            <Text style={styles.degree}>
-              Bachelor of Technology - Computer Science Engineering
-            </Text>
-            <Text style={styles.clgName}>
-              Sri Sukhmani Institute of Engineering and Technology
-            </Text>
-            <Text style={styles.date}>(Expected graduation Jun 2021)</Text>
-            <Text style={styles.cgpa}>CGPA: 7.2</Text>
+            {/* Education */}
+            <View style={styles.projectBlock}>
+              <Text style={styles.project}>EDUCATION</Text>
+              <View style={styles.projectContainer2}>
+                <Text style={styles.degree}>
+                  {degree}
+                </Text>
+                <Text style={styles.clgName}>
+                  {college}
+                </Text>
+                <Text style={styles.date}>{educationendDate? `(Expected graduation ${educationendDate})` : ''}</Text>
+                <Text style={styles.cgpa}>{cgpa ? `CGPA: ${cgpa}`: ""}</Text>
+              </View>
+            </View>
           </View>
-        </View>
-        </View>
         </View>
       </View>
     </View>
