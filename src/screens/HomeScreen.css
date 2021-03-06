@@ -122,7 +122,7 @@
   justify-content: center;
   align-items: center;
   display: flex;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.719);
 
   font-weight: 500;
   bottom: 0px;
@@ -131,6 +131,13 @@
 
   font-size: 14px;
   color: black;
+}
+
+.Template_btn:hover {
+  
+  background-color: rgb(255, 255, 255);
+
+  
 }
 
 .Swipe_Arrow_Mob{

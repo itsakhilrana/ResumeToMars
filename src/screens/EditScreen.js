@@ -10,8 +10,13 @@ const Edit = ({ history, location }) => {
   const [phoneNo, setphoneNo] = useState('')
   const [about, setAbout] = useState('')
   const [profession, setProfession] = useState('')
-  
-  const redirect = location.search ? location.search.split("=")[1] : '/'
+  const [disable, setDisable] = useState()
+  const limit = 90
+
+
+  // const string = 'During this training, I learned Python programming language from scratch. It was a nice experience for me as, I am passionate and curious to learn  new things.'
+  // console.log(string.length)
+  const redirect = location.search ? location.search.split('=')[1] : '/'
   console.log(redirect)
   const dispatch = useDispatch()
 
@@ -21,11 +26,8 @@ const Edit = ({ history, location }) => {
     about: about,
     phoneNo: phoneNo,
     profession: profession,
-    redirect:redirect
+    redirect: redirect,
   }
-
-
-  
 
   // const personalDetails = useSelector((state) => state.personalDetails)
   // console.log(personalDetails)
@@ -50,14 +52,23 @@ const Edit = ({ history, location }) => {
 
     history.push('/education')
   }
+
+  const disableHandler = () => {
+    let valid = about ? limit - about.length : 90
+
+    if (valid > 0) {
+      return false
+    } else {
+      return true
+    }
+  }
   return (
     <div className="EditScreen">
       <div className="Personal_Info">
         <p>Your Personal Info</p>
 
         <form className="Form" onSubmit={submitHandler}>
-
-         <label>Full Name</label>
+          <label>Full Name</label>
           <input
             type="text"
             value={name}
@@ -90,15 +101,25 @@ const Edit = ({ history, location }) => {
           ></input>
           <br></br>
           <label>About</label>
-          <input
+          <textarea 
             type="text"
             value={about}
             placeholder="About you..."
-            onChange={(e) => setAbout(e.target.value)}
-          ></input>
+            onChange={(e) => {
+              setAbout(e.target.value)
+            }}
+          ></textarea>
+          <div style={{textAlign:"end", width:"380px"}}>
+            <span style={{ color: 'red',fontSize:"12px" }}>
+              {about ? limit - about.length : 90}
+              {`/${limit}`}
+            </span>
+          </div>
           <br></br>
 
-          <button type="submit">Next</button>
+          <button type="submit" disabled={disableHandler()}>
+            Next
+          </button>
           {/* <div className="Testing_btn">
             <div className="Previous_btn">Previous</div>
             <div className="Next_btn">Next</div>

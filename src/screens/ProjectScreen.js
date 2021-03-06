@@ -12,6 +12,7 @@ const ProjectScreen = ({ history }) => {
   const [projectDescription2, setprojectDescription2] = useState('')
   const [projectLink2, setprojectLink2] = useState('')
 
+  const limit = 150
   const dispatch = useDispatch()
 
   const details = {
@@ -52,6 +53,26 @@ const ProjectScreen = ({ history }) => {
   const previousHandler = () => {
     history.push('/trainings')
   }
+
+  const disableHandler = () => {
+    let valid = projectDescription ? limit - projectDescription.length : limit
+
+    if (valid > 0) {
+      return false
+    } else {
+      return true
+    }
+  }
+
+  const disableHandler2 = () => {
+    let valid = projectDescription2 ? limit - projectDescription2.length : limit
+
+    if (valid > 0) {
+      return false
+    } else {
+      return true
+    }
+  }
   return (
     <div className="ProjectScreen">
       <div className="Project_Info">
@@ -72,12 +93,18 @@ const ProjectScreen = ({ history }) => {
               ></input>
               <br></br>
               <label>Project Description</label>
-              <input
+              <textarea
                 type="text"
                 value={projectDescription}
                 placeholder="About your project..."
                 onChange={(e) => setprojectDescription(e.target.value)}
-              ></input>
+              ></textarea>
+              <div style={{ textAlign: 'end', width: '380px' }}>
+                <span style={{ color: 'red', fontSize: '12px' }}>
+                  {projectDescription ? limit - projectDescription.length : limit}
+                  {`/${limit}`}
+                </span>
+              </div>
               <br></br>
               <label>Project Link</label>
               <input
@@ -101,12 +128,18 @@ const ProjectScreen = ({ history }) => {
               ></input>
               <br></br>
               <label>Project Description</label>
-              <input
+              <textarea
                 type="text"
                 value={projectDescription2}
                 placeholder="About your project..."
                 onChange={(e) => setprojectDescription2(e.target.value)}
-              ></input>
+              ></textarea>
+              <div style={{ textAlign: 'end', width: '380px' }}>
+                <span style={{ color: 'red', fontSize: '12px' }}>
+                  {projectDescription2  ? limit - projectDescription2.length : limit}
+                  {`/${limit}`}
+                </span>
+              </div>
               <br></br>
               <label>Project Link</label>
               <input
@@ -130,7 +163,7 @@ const ProjectScreen = ({ history }) => {
 
           <div className="btn_div">
             <button onClick={previousHandler}>Previous</button>
-            <button type="submit">Next</button>
+            <button type="submit" disabled={disableHandler2() || disableHandler()}>Next</button>
           </div>
         </form>
       </div>

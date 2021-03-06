@@ -18,6 +18,8 @@ const Trainings = ({ history }) => {
   const [anotherExp, setanotherExp] = useState('')
   const [check, setCheck] = useState('')
   const [toggle, setToggle] = useState(false)
+
+  const limit = 150
   console.log(toggle)
   const dispatch = useDispatch()
 
@@ -79,6 +81,26 @@ const Trainings = ({ history }) => {
     }
   }
 
+  const disableHandler = () => {
+    let valid = about ? limit - about.length : limit
+
+    if (valid > 0) {
+      return false
+    } else {
+      return true
+    }
+  }
+
+  const disableHandler2 = () => {
+    let valid2 = about2 ? limit - about2.length : limit
+
+    if (valid2 > 0) {
+      return false
+    } else {
+      return true
+    }
+  }
+
   return (
     <div className="TrainingScreen">
       <div className="Training_Info">
@@ -120,12 +142,18 @@ const Trainings = ({ history }) => {
               ></input>
               <br></br>
               <label>Learning Experience</label>
-              <input
+              <textarea
                 type="text"
                 value={about}
                 placeholder="Write about your experience..."
                 onChange={(e) => setAbout(e.target.value)}
-              ></input>
+              ></textarea>
+              <div style={{ textAlign: 'end', width: '380px' }}>
+                <span style={{ color: 'red', fontSize: '12px' }}>
+                  {about || about2 ? limit - about.length : limit}
+                  {`/${limit}`}
+                </span>
+              </div>
               <br></br>
               {anotherExp && anotherExp === 'intermidiate' ? (
                 <div onClick={() => setToggle(!toggle)}>
@@ -154,7 +182,6 @@ const Trainings = ({ history }) => {
               ) : null}
             </div>
             <div className="Training2">
-              
               {toggle ? (
                 <>
                   <label>Company</label>
@@ -190,12 +217,18 @@ const Trainings = ({ history }) => {
                   ></input>
                   <br></br>
                   <label>Learning Experience</label>
-                  <input
+                  <textarea
                     type="text"
                     value={about2}
                     placeholder="Write about your experience..."
                     onChange={(e) => setAbout2(e.target.value)}
-                  ></input>
+                  ></textarea>
+                  <div style={{ textAlign: 'end', width: '380px' }}>
+                    <span style={{ color: 'red', fontSize: '12px' }}>
+                      {about2 ? limit - about2.length : limit}
+                      {`/${limit}`}
+                    </span>
+                  </div>
                   <br></br>
                 </>
               ) : null}
@@ -204,7 +237,9 @@ const Trainings = ({ history }) => {
 
           <div className="btn_div">
             <button onClick={previousHandler}>Previous</button>
-            <button type="submit">Next</button>
+            <button type="submit" disabled={disableHandler() || disableHandler2()}>
+              Next
+            </button>
           </div>
         </form>
       </div>
