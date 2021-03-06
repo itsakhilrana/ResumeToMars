@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Spring } from 'react-spring/renderprops'
 import { useDispatch } from 'react-redux'
 import './Achievement.css'
 
@@ -43,35 +44,73 @@ const Achievement = ({ history }) => {
         <p>Your Achievements</p>
 
         <form className="Form" onSubmit={submitHandler}>
-          <label>Write your recent achievements</label>
-          <input
-            type="text"
-            value={achievement1}
-            placeholder="1. Achievement"
-            onChange={(e) => setAchievements1(e.target.value)}
-          ></input>
-          <br></br>
+          <Spring
+            from={{ opacity: 0, marginLeft: -500 }}
+            to={{ opacity: 1, marginLeft: 0 }}
+          >
+            {(props) => (
+              <div style={props}>
+                <label>Write your recent achievements</label>
+                <input
+                  type="text"
+                  value={achievement1}
+                  placeholder="1. Achievement"
+                  onChange={(e) => setAchievements1(e.target.value)}
+                ></input>
+                <br></br>
+              </div>
+            )}
+          </Spring>
 
-          <input
-            type="text"
-            value={achievement2}
-            placeholder="2. Achievement"
-            onChange={(e) => setAchievements2(e.target.value)}
-          ></input>
-          <br></br>
+          <Spring
+            from={{ opacity: 0, marginLeft: 500 }}
+            to={{ opacity: 1, marginLeft: 0 }}
+          >
+            {(props) => (
+              <div style={props}>
+                <input
+                  type="text"
+                  value={achievement2}
+                  placeholder="2. Achievement"
+                  onChange={(e) => setAchievements2(e.target.value)}
+                ></input>
+                <br></br>
+              </div>
+            )}
+          </Spring>
 
-          <input
-            type="text"
-            value={achievement3}
-            placeholder="3. Achievement"
-            onChange={(e) => setAchievements3(e.target.value)}
-          ></input>
-          <br></br>
+          <Spring
+            from={{ opacity: 0, marginLeft: -500 }}
+            to={{ opacity: 1, marginLeft: 0 }}
+          >
+            {(props) => (
+              <div style={props}>
+                <input
+                  type="text"
+                  value={achievement3}
+                  placeholder="3. Achievement"
+                  onChange={(e) => setAchievements3(e.target.value)}
+                ></input>
+                <br></br>
+              </div>
+            )}
+          </Spring>
 
-          <div className="btn_div">
+          <Spring
+            from={{ opacity: 0, marginLeft: -500 }}
+            to={{ opacity: 1, marginLeft: 0 }}
+          >
+            {(props) => (
+              <div style={props}>
+               <div className="btn_div">
             <button onClick={previousHandler}>Previous</button>
             <button type="submit">Next</button>
           </div>
+              </div>
+            )}
+          </Spring>
+
+          
         </form>
       </div>
     </div>

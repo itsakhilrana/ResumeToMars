@@ -1,0 +1,37 @@
+.SplashScreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.SplashScreen_Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ResumeToMars{
+    font-size: 40px;
+    font-weight: 700;
+    background: -webkit-linear-gradient(#e5ff00,#f7b00a );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+@media only screen and (max-width: 414px) {
+    
+    .SplashScreen{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 110px;
+    }
+    
+    .SplashScreen_Container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  }

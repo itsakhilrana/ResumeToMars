@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Spring } from 'react-spring/renderprops'
 import { useDispatch } from 'react-redux'
 import { PROJECT_DETAILS } from '../constants/resumeConstants'
 import './ProjectScreen.css'
@@ -81,90 +82,176 @@ const ProjectScreen = ({ history }) => {
         <form className="Form" onSubmit={submitHandler}>
           <div className="Project_Container">
             <div className="Project1">
-              <div className="Project_Label">
-                <span>First Project Details</span>
-              </div>
-              <label>Project Name</label>
-              <input
-                type="text"
-                value={projectName}
-                placeholder="Google AI"
-                onChange={(e) => setprojectName(e.target.value)}
-              ></input>
-              <br></br>
-              <label>Project Description</label>
-              <textarea
-                type="text"
-                value={projectDescription}
-                placeholder="About your project..."
-                onChange={(e) => setprojectDescription(e.target.value)}
-              ></textarea>
-              <div style={{ textAlign: 'end', width: '380px' }}>
-                <span style={{ color: 'red', fontSize: '12px' }}>
-                  {projectDescription ? limit - projectDescription.length : limit}
-                  {`/${limit}`}
-                </span>
-              </div>
-              <br></br>
-              <label>Project Link</label>
-              <input
-                type="text"
-                value={projectLink}
-                placeholder="https://"
-                onChange={(e) => setprojectLink(e.target.value)}
-              ></input>
-              <br></br>
+              <Spring
+                from={{ opacity: 0, marginLeft: -500 }}
+                to={{ opacity: 1, marginLeft: 0 }}
+              >
+                {(props) => (
+                  <div style={props}>
+                    <div className="Project_Label">
+                      <span>First Project Details</span>
+                    </div>
+                    <label>Project Name</label>
+                    <input
+                      type="text"
+                      value={projectName}
+                      placeholder="Google AI"
+                      onChange={(e) => setprojectName(e.target.value)}
+                    ></input>
+                    <br></br>
+                  </div>
+                )}
+              </Spring>
+
+              <Spring
+                from={{ opacity: 0, marginLeft: 500 }}
+                to={{ opacity: 1, marginLeft: 0 }}
+              >
+                {(props) => (
+                  <div style={props}>
+                    <label>Project Description</label>
+                    <textarea
+                      type="text"
+                      value={projectDescription}
+                      placeholder="About your project..."
+                      onChange={(e) => setprojectDescription(e.target.value)}
+                    ></textarea>
+                    <div style={{ textAlign: 'end', width: '380px' }}>
+                      <span style={{ color: 'red', fontSize: '12px' }}>
+                        {projectDescription
+                          ? limit - projectDescription.length
+                          : limit}
+                        {`/${limit}`}
+                      </span>
+                    </div>
+                    <br></br>
+                  </div>
+                )}
+              </Spring>
+
+              <Spring
+                from={{ opacity: 0, marginLeft: -500 }}
+                to={{ opacity: 1, marginLeft: 0 }}
+              >
+                {(props) => (
+                  <div style={props}>
+                    <label>Project Link</label>
+                    <input
+                      type="text"
+                      value={projectLink}
+                      placeholder="https://"
+                      onChange={(e) => setprojectLink(e.target.value)}
+                    ></input>
+                    <br></br>
+                  </div>
+                )}
+              </Spring>
             </div>
             <div className="Proejct2">
-            <div className="Project_Label">
-                <span>Second Project Details</span>
-              </div>
-              <label>Project Name</label>
-              <input
-                type="text"
-                value={projectName2}
-                placeholder="Google Map"
-                onChange={(e) => setprojectName2(e.target.value)}
-              ></input>
-              <br></br>
-              <label>Project Description</label>
-              <textarea
-                type="text"
-                value={projectDescription2}
-                placeholder="About your project..."
-                onChange={(e) => setprojectDescription2(e.target.value)}
-              ></textarea>
-              <div style={{ textAlign: 'end', width: '380px' }}>
-                <span style={{ color: 'red', fontSize: '12px' }}>
-                  {projectDescription2  ? limit - projectDescription2.length : limit}
-                  {`/${limit}`}
-                </span>
-              </div>
-              <br></br>
-              <label>Project Link</label>
-              <input
-                type="text"
-                value={projectLink2}
-                placeholder="https://"
-                onChange={(e) => setprojectLink2(e.target.value)}
-              ></input>
-              <br></br>
-              <label>Skills</label>
-              <input
-                type="text"
-                value={skills}
-                placeholder="Java, Python, C++ & more."
-                onChange={(e) => setSkills(e.target.value)}
-              ></input>
+              <Spring
+                from={{ opacity: 0, marginLeft: 500 }}
+                to={{ opacity: 1, marginLeft: 0 }}
+              >
+                {(props) => (
+                  <div style={props}>
+                    <div className="Project_Label">
+                      <span>Second Project Details</span>
+                    </div>
+                    <label>Project Name</label>
+                    <input
+                      type="text"
+                      value={projectName2}
+                      placeholder="Google Map"
+                      onChange={(e) => setprojectName2(e.target.value)}
+                    ></input>
+                    <br></br>
+                  </div>
+                )}
+              </Spring>
 
-              <br></br>
+              <Spring
+                from={{ opacity: 0, marginLeft: -500 }}
+                to={{ opacity: 1, marginLeft: 0 }}
+              >
+                {(props) => (
+                  <div style={props}>
+                    <label>Project Description</label>
+                    <textarea
+                      type="text"
+                      value={projectDescription2}
+                      placeholder="About your project..."
+                      onChange={(e) => setprojectDescription2(e.target.value)}
+                    ></textarea>
+                    <div style={{ textAlign: 'end', width: '380px' }}>
+                      <span style={{ color: 'red', fontSize: '12px' }}>
+                        {projectDescription2
+                          ? limit - projectDescription2.length
+                          : limit}
+                        {`/${limit}`}
+                      </span>
+                    </div>
+                    <br></br>
+                  </div>
+                )}
+              </Spring>
+
+              <Spring
+                from={{ opacity: 0, marginLeft: 500 }}
+                to={{ opacity: 1, marginLeft: 0 }}
+              >
+                {(props) => (
+                  <div style={props}>
+                    <label>Project Link</label>
+                    <input
+                      type="text"
+                      value={projectLink2}
+                      placeholder="https://"
+                      onChange={(e) => setprojectLink2(e.target.value)}
+                    ></input>
+                    <br></br>
+                  </div>
+                )}
+              </Spring>
+
+              <Spring
+                from={{ opacity: 0, marginLeft: -500 }}
+                to={{ opacity: 1, marginLeft: 0 }}
+              >
+                {(props) => (
+                  <div style={props}>
+                    <label>Skills</label>
+                    <input
+                      type="text"
+                      value={skills}
+                      placeholder="Java, Python, C++ & more."
+                      onChange={(e) => setSkills(e.target.value)}
+                    ></input>
+
+                    <br></br>
+                  </div>
+                )}
+              </Spring>
             </div>
           </div>
 
-          <div className="btn_div">
-            <button onClick={previousHandler}>Previous</button>
-            <button type="submit" disabled={disableHandler2() || disableHandler()}>Next</button>
-          </div>
+          <Spring
+            from={{ opacity: 0, marginLeft: 500 }}
+            to={{ opacity: 1, marginLeft: 0 }}
+          >
+            {(props) => (
+              <div style={props}>
+                <div className="btn_div">
+                  <button onClick={previousHandler}>Previous</button>
+                  <button
+                    type="submit"
+                    disabled={disableHandler2() || disableHandler()}
+                  >
+                    Next
+                  </button>
+                </div>
+              </div>
+            )}
+          </Spring>
         </form>
       </div>
     </div>

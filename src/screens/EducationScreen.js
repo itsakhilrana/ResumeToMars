@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Spring } from 'react-spring/renderprops'
 import { useDispatch } from 'react-redux'
 import { EDUCATION_DETAILS } from '../constants/resumeConstants'
 import './EducationScreen.css'
@@ -48,58 +49,117 @@ const EducationScreen = ({ history }) => {
         <p>Your Graduation Background</p>
 
         <form className="Form" onSubmit={submitHandler}>
-          <select
-            className="Select"
-            value={degree}
-            onChange={(e) => setDegree(e.target.value)}
+          <Spring
+            from={{ opacity: 0, marginLeft: -500 }}
+            to={{ opacity: 1, marginLeft: 0 }}
           >
-            <option className="Option" value="B">
-              Select a Degree
-            </option>
-            <option className="Option" value="Bachelor of Technology - Computer Science Engineering">
-              Bachelor of Technology - Computer Science & Engineering
-            </option>
-            <option className="Option" value="Bachelor of Technology - Aeronautical Engineering">
-              Bachelor of Technology - Aeronautical Engineering
-            </option>
-            <option className="Option" value="Bachelor of Technology - Mechanical Engineering">
-              Bachelor of Technology - Mechanical Engineering
-            </option>
-            <option className="Option" value="Bachelor of Technology - Electronics & Communication">
-              Bachelor of Technology - Electronics & Communication
-            </option>
+            {(props) => (
+              <div style={props}>
+                <select
+                  className="Select"
+                  value={degree}
+                  onChange={(e) => setDegree(e.target.value)}
+                >
+                  <option className="Option" value="B">
+                    Select a Degree
+                  </option>
+                  <option
+                    className="Option"
+                    value="Bachelor of Technology - Computer Science Engineering"
+                  >
+                    Bachelor of Technology - Computer Science & Engineering
+                  </option>
+                  <option
+                    className="Option"
+                    value="Bachelor of Technology - Aeronautical Engineering"
+                  >
+                    Bachelor of Technology - Aeronautical Engineering
+                  </option>
+                  <option
+                    className="Option"
+                    value="Bachelor of Technology - Mechanical Engineering"
+                  >
+                    Bachelor of Technology - Mechanical Engineering
+                  </option>
+                  <option
+                    className="Option"
+                    value="Bachelor of Technology - Electronics & Communication"
+                  >
+                    Bachelor of Technology - Electronics & Communication
+                  </option>
+                </select>
+                <br></br>
+              </div>
+            )}
+          </Spring>
 
-          </select>
-          <br></br>
-          <label>College</label>
-          <input
-            type="text"
-            value={college}
-            placeholder="University of Pennsylvania"
-            onChange={(e) => setcollege(e.target.value)}
-          ></input>
-          <br></br>
-          <label>CGPA</label>
-          <input
-            type="text"
-            value={cgpa}
-            placeholder="9.8"
-            onChange={(e) => setCgpa(e.target.value)}
-          ></input>
-          <br></br>
-          <label>Expected Graduation</label>
-          <input
-            type="text"
-            value={endDate}
-            placeholder="2021 Jun"
-            onChange={(e) => setEndDate(e.target.value)}
-          ></input>
-          <br></br>
+          <Spring
+            from={{ opacity: 0, marginLeft: 500 }}
+            to={{ opacity: 1, marginLeft: 0 }}
+          >
+            {(props) => (
+              <div style={props}>
+                <label>College</label>
+                <input
+                  type="text"
+                  value={college}
+                  placeholder="University of Pennsylvania"
+                  onChange={(e) => setcollege(e.target.value)}
+                ></input>
+                <br></br>
+              </div>
+            )}
+          </Spring>
 
-          <div className="btn_div">
-            <button onClick={previousHandler}>Previous</button>
-            <button type="submit">Next</button>
-          </div>
+          <Spring
+            from={{ opacity: 0, marginLeft: -500 }}
+            to={{ opacity: 1, marginLeft: 0 }}
+          >
+            {(props) => (
+              <div style={props}>
+                <label>CGPA</label>
+                <input
+                  type="text"
+                  value={cgpa}
+                  placeholder="9.8"
+                  onChange={(e) => setCgpa(e.target.value)}
+                ></input>
+                <br></br>
+              </div>
+            )}
+          </Spring>
+
+          <Spring
+            from={{ opacity: 0, marginLeft: 500 }}
+            to={{ opacity: 1, marginLeft: 0 }}
+          >
+            {(props) => (
+              <div style={props}>
+                <label>Expected Graduation</label>
+                <input
+                  type="text"
+                  value={endDate}
+                  placeholder="2021 Jun"
+                  onChange={(e) => setEndDate(e.target.value)}
+                ></input>
+                <br></br>
+              </div>
+            )}
+          </Spring>
+
+          <Spring
+            from={{ opacity: 0, marginLeft: -500 }}
+            to={{ opacity: 1, marginLeft: 0 }}
+          >
+            {(props) => (
+              <div style={props}>
+                <div className="btn_div">
+                  <button onClick={previousHandler}>Previous</button>
+                  <button type="submit">Next</button>
+                </div>
+              </div>
+            )}
+          </Spring>
         </form>
       </div>
     </div>

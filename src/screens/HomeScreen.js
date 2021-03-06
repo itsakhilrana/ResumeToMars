@@ -7,14 +7,17 @@ import fly from '../imgs/fly.svg'
 import mars from '../imgs/combo.svg'
 import MobileCombo from '../imgs/MobileCombo.svg'
 
+
 const HomeScreen = () => {
+
+  
   return (
     <div className="HomeScreen">
       <div className="Intro">
       
         <div className="Punch">
           
-          <p className="Desktop_P">
+          <p className="Desktop_P" >
             Create your professional resume in 15 minutes.
           </p>
           <img className="Mobile_Combo" src={MobileCombo} height="500" width="350"></img>
@@ -33,7 +36,7 @@ const HomeScreen = () => {
       <div className="Templates_Container">
         <div className="Scrolling">
           <ScrollContainer className="Scrolling_Templates">
-            <div className="Template_Card">
+            <div className="Template_Card" >
               <img src={ResumeTem}></img>
 
               <p className="Template_Type">
