@@ -5,16 +5,17 @@ import { useSelector } from 'react-redux'
 const styles = StyleSheet.create({
   page: {
     flexDirection: 'row',
-    backgroundColor: '#E4E4E4',
+    backgroundColor: 'white',
   },
   header: {
-    color: 'white',
-    paddingTop: 10,
+    color: '#202327',
+    paddingTop: 30,
     paddingBottom: 10,
     paddingLeft: 20,
     paddingRight: 20,
 
-    backgroundColor: '#202327',
+    // backgroundColor: '#202327',
+    
     height: '150px',
     width: '600px',
   },
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: 'Roboto regular',
     borderBottomWidth: 4,
-    borderBottomColor: 'white',
+    borderBottomColor: '#202327',
     borderBottomStyle: 'solid',
     marginTop: 5,
   },

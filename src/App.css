@@ -14,9 +14,10 @@
 }
 
 .Web_Name{
-  background: -webkit-linear-gradient(#e5ff00,#f7b00a );
+  /* background: -webkit-linear-gradient(#e5ff00,#f7b00a );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+  color: #f7b00a;
   font-weight: 700;
   position: fixed;
 }
@@ -33,7 +34,7 @@
   }
 
   .Web_Name{
-    color: white;
+    
     margin-left: 10px;
     font-weight: 700;
     position: fixed;
