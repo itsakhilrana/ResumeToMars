@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Route, Switch, Link } from 'react-router-dom'
+import { Spring } from 'react-spring/renderprops'
 import Edit from './screens/EditScreen'
 import './App.css'
 import star from './imgs/stars.svg'
@@ -42,34 +43,49 @@ function App() {
   const [isloading, setloading] = useState(true)
 
   useEffect(() => {
-    setTimeout(() => {
-      setloading(false)
-    }, 4500)
+    // setTimeout(() => {
+    //   setloading(false)
+    // }, 4500)
   }, [])
   return (
     <div className="App">
-      {isloading ? (
+      {/* {isloading ? (
         <SplashScreen></SplashScreen>
-      ) : (
-        <>
-          <Link style={{ textDecoration: 'none' }} to="/">
-            <p className="Web_Name">ResumeToMars</p>
-          </Link>
+      ) : ( */}
 
-          <Switch>
-            <Route exact path="/" component={HomeScreen}></Route>
-            <Route path="/edit" component={Edit}></Route>
-            <Route path="/download" component={DownloadScreen}></Route>
-            <Route path="/education" component={EducationScreen}></Route>
-            <Route path="/trainings" component={TrainingScreen}></Route>
-            <Route path="/skillsnproject" component={ProjectScreen}></Route>
-            <Route path="/achievement" component={AchievementScreen}></Route>
-            <Route path="/school" component={SchoolScreen}></Route>
-            {/* <Route path="/splashscreen" component={SplashScreen}></Route> */}
-            <Route component={HomeScreen}></Route>
-          </Switch>
-        </>
-      )}
+      <Spring
+        from={{ opacity: 0,  }}
+        to={{ opacity: 1,  }}
+        config={{duration: 2000}}
+      >
+        {(props) => (
+          <div style={props}>
+            <>
+              <Link style={{ textDecoration: 'none' }} to="/">
+                <p className="Web_Name">ResumeToMars</p>
+              </Link>
+
+              <Switch>
+                <Route exact path="/" component={HomeScreen}></Route>
+                <Route path="/edit" component={Edit}></Route>
+                <Route path="/download" component={DownloadScreen}></Route>
+                <Route path="/education" component={EducationScreen}></Route>
+                <Route path="/trainings" component={TrainingScreen}></Route>
+                <Route path="/skillsnproject" component={ProjectScreen}></Route>
+                <Route
+                  path="/achievement"
+                  component={AchievementScreen}
+                ></Route>
+                <Route path="/school" component={SchoolScreen}></Route>
+                {/* <Route path="/splashscreen" component={SplashScreen}></Route> */}
+                <Route component={HomeScreen}></Route>
+              </Switch>
+            </>
+          </div>
+        )}
+      </Spring>
+
+      {/* )} */}
     </div>
   )
 }

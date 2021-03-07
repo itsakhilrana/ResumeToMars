@@ -105,7 +105,7 @@ const Trainings = ({ history }) => {
   return (
     <div className="TrainingScreen">
       <div className="Training_Info">
-        <p>Your Training Experience</p>
+        <p>Your Work Experience</p>
 
         <form className="Form" onSubmit={submitHandler}>
           <div className="Training_Container">

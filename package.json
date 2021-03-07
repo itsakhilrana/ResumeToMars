@@ -16,9 +16,11 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
     "react-spring": "^8.0.27",
+    "react-three-fiber": "^5.3.19",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
+    "three": "^0.126.1",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
