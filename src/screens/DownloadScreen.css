@@ -24,6 +24,7 @@
 }
 
 .download_btn{
+    position: relative;
     width: 200px;
     height: 40px;
     display: flex;
@@ -61,6 +62,7 @@
     }
     
     .download_btn{
+        position: relative;
         width: 150px;
         height: 50px;
         display: flex;
