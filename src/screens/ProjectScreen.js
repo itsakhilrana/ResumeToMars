@@ -103,6 +103,26 @@ const ProjectScreen = ({ history }) => {
                 )}
               </Spring>
 
+              
+
+              <Spring
+                from={{ opacity: 0, marginLeft: -500 }}
+                to={{ opacity: 1, marginLeft: 0 }}
+              >
+                {(props) => (
+                  <div style={props}>
+                    <label>Project Link</label>
+                    <input
+                      type="text"
+                      value={projectLink}
+                      placeholder="https://"
+                      onChange={(e) => setprojectLink(e.target.value)}
+                    ></input>
+                    <br></br>
+                  </div>
+                )}
+              </Spring>
+
               <Spring
                 from={{ opacity: 0, marginLeft: 500 }}
                 to={{ opacity: 1, marginLeft: 0 }}
@@ -124,24 +144,6 @@ const ProjectScreen = ({ history }) => {
                         {`/${limit}`}
                       </span>
                     </div>
-                    <br></br>
-                  </div>
-                )}
-              </Spring>
-
-              <Spring
-                from={{ opacity: 0, marginLeft: -500 }}
-                to={{ opacity: 1, marginLeft: 0 }}
-              >
-                {(props) => (
-                  <div style={props}>
-                    <label>Project Link</label>
-                    <input
-                      type="text"
-                      value={projectLink}
-                      placeholder="https://"
-                      onChange={(e) => setprojectLink(e.target.value)}
-                    ></input>
                     <br></br>
                   </div>
                 )}
@@ -169,6 +171,26 @@ const ProjectScreen = ({ history }) => {
                 )}
               </Spring>
 
+             
+
+              <Spring
+                from={{ opacity: 0, marginLeft: 500 }}
+                to={{ opacity: 1, marginLeft: 0 }}
+              >
+                {(props) => (
+                  <div style={props}>
+                    <label>Project Link</label>
+                    <input
+                      type="text"
+                      value={projectLink2}
+                      placeholder="https://"
+                      onChange={(e) => setprojectLink2(e.target.value)}
+                    ></input>
+                    <br></br>
+                  </div>
+                )}
+              </Spring>
+
               <Spring
                 from={{ opacity: 0, marginLeft: -500 }}
                 to={{ opacity: 1, marginLeft: 0 }}
@@ -190,24 +212,6 @@ const ProjectScreen = ({ history }) => {
                         {`/${limit}`}
                       </span>
                     </div>
-                    <br></br>
-                  </div>
-                )}
-              </Spring>
-
-              <Spring
-                from={{ opacity: 0, marginLeft: 500 }}
-                to={{ opacity: 1, marginLeft: 0 }}
-              >
-                {(props) => (
-                  <div style={props}>
-                    <label>Project Link</label>
-                    <input
-                      type="text"
-                      value={projectLink2}
-                      placeholder="https://"
-                      onChange={(e) => setprojectLink2(e.target.value)}
-                    ></input>
                     <br></br>
                   </div>
                 )}

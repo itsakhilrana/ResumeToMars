@@ -36,10 +36,10 @@ const styles = StyleSheet.create({
   }
 })
 const Skills = () => {
-  const projectDetails = localStorage.getItem('projectDetails')
-    ? JSON.parse(localStorage.getItem('projectDetails'))
+  const SkillDetails = localStorage.getItem('SkillDetails')
+    ? JSON.parse(localStorage.getItem('SkillDetails'))
     : {}
-  const {skills} = projectDetails  
+  const {Skill1,Skill2,Skill3,Skill4,Skill5,Skill6} = SkillDetails  
   return (
     <View style={styles.blocks}>
       <Text style={styles.skillBlock}>SKILLS</Text>
@@ -47,8 +47,12 @@ const Skills = () => {
         <View style={styles.skillDetails}>
           <View style={styles.column}>
             <View style={styles.row}>
-              <Text style={styles.skills}>{skills} </Text>
-              
+              <Text style={styles.skills}>{Skill1} </Text>
+              <Text style={styles.skills}>{Skill2} </Text>
+              <Text style={styles.skills}>{Skill3} </Text>
+              <Text style={styles.skills}>{Skill4} </Text>
+              <Text style={styles.skills}>{Skill5} </Text>
+              <Text style={styles.skills}>{Skill6} </Text>
             </View>
           </View>
          

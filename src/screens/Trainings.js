@@ -210,6 +210,7 @@ const Trainings = ({ history }) => {
                               color: 'red',
                               fontSize: '14px',
                               textAlign: 'end',
+                              position:'relative'
                             }}
                           >
                             Remove Experience
@@ -220,6 +221,7 @@ const Trainings = ({ history }) => {
                               color: 'white',
                               fontSize: '14px',
                               textAlign: 'end',
+                              position:'relative'
                             }}
                           >
                             Add Another Experience

@@ -15,7 +15,7 @@
     font-weight: 700;
     color: white;
     width: 200px;
-    margin-right: 160px;
+    margin-right: 50px;
   }
   
   .btn_div {
@@ -29,6 +29,14 @@
     font-weight: 700;
   
     letter-spacing: 1px;
+  }
+
+  .Skill_Container{
+      display: flex;
+  }
+
+  .Skill1{
+      margin-right: 50px;
   }
   
   @media only screen and (max-width: 414px) {
@@ -59,6 +67,11 @@
       font-weight: 700;
     
       letter-spacing: 1px;
+    }
+
+    .Skill_Container{
+        display: inline-block;
+        width: 380px;
     }
   }
   

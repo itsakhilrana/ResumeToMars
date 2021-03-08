@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
   },
   skillName: {
     fontSize: 12,
-    width: '45px',
+
     lineHeight: '2',
   },
   company: {
@@ -99,6 +99,7 @@ const styles = StyleSheet.create({
   date: {
     marginTop: '3px',
     fontFamily: 'Roboto light',
+    fontSize: 10,
   },
   cgpa: {
     marginTop: '5px',
@@ -124,6 +125,13 @@ const styles = StyleSheet.create({
   rightBlocks: {
     flexDirection: 'column',
     paddingBottom: '20px',
+  },
+  skillRow: {
+    flexDirection: 'row',
+  },
+  skillCol: {
+    flexDirection: 'column',
+    marginRight: '20px',
   },
 })
 
@@ -159,19 +167,30 @@ const Template2 = () => {
     projectLink,
     projectName2,
     projectDescription2,
-    projectLink2,skills
+    projectLink2,
+    skills,
   } = projectDetails
 
   const achievementsDetails = localStorage.getItem('achievementsDetails')
     ? JSON.parse(localStorage.getItem('achievementsDetails'))
     : {}
 
-    const {achievement1, achievement2, achievement3} = achievementsDetails
+  const { achievement1, achievement2, achievement3 } = achievementsDetails
 
   const educationDetails = localStorage.getItem('educationDetails')
     ? JSON.parse(localStorage.getItem('educationDetails'))
     : {}
   const { degree, college, cgpa, endDate: educationendDate } = educationDetails
+
+  const schoolDetails = localStorage.getItem('schoolDetails')
+    ? JSON.parse(localStorage.getItem('schoolDetails'))
+    : {}
+  const { stream, school, board, completion } = schoolDetails
+
+  const SkillDetails = localStorage.getItem('SkillDetails')
+    ? JSON.parse(localStorage.getItem('SkillDetails'))
+    : {}
+  const { Skill1, Skill2, Skill3, Skill4, Skill5, Skill6 } = SkillDetails
 
   return (
     <View style={styles.Template2}>
@@ -192,12 +211,12 @@ const Template2 = () => {
             <View>
               <View style={styles.projectContainer}>
                 <Text style={styles.projectName}>{projectName}</Text>
-
+                <Text style={styles.date}>{projectLink}</Text>
                 <Text style={styles.aboutProject}>{projectDescription}</Text>
               </View>
               <View style={styles.projectContainer}>
                 <Text style={styles.projectName}>{projectName2}</Text>
-
+                <Text style={styles.date}>{projectLink2}</Text>
                 <Text style={styles.aboutProject}>{projectDescription2}</Text>
               </View>
 
@@ -231,12 +250,20 @@ const Template2 = () => {
               <View style={styles.projectContainer}>
                 <Text style={styles.projectName}>{jobtitle}</Text>
                 <Text style={styles.company}>{company}</Text>
+                <Text style={styles.date}>
+                  {startDate && endDate ? `(${startDate} - ${endDate})` : null}
+                </Text>
                 <Text style={styles.aboutProject}>{aboutJob}</Text>
               </View>
 
               <View style={styles.projectContainer}>
                 <Text style={styles.projectName}>{jobtitle2}</Text>
                 <Text style={styles.company}>{company2}</Text>
+                <Text style={styles.date}>
+                  {startDate2 && endDate2
+                    ? `(${startDate2} - ${endDate2})`
+                    : null}
+                </Text>
                 <Text style={styles.aboutProject}>{aboutJob2}</Text>
               </View>
 
@@ -273,7 +300,18 @@ const Template2 = () => {
             <View style={styles.projectBlock}>
               <Text style={styles.project}>SKILLS</Text>
               <View style={styles.projectContainer2}>
-                <Text style={styles.skillName}>{skills}</Text>
+                <View style={styles.skillRow}>
+                  <View style={styles.skillCol}>
+                    <Text style={styles.skillName}>{Skill1}</Text>
+                    <Text style={styles.skillName}>{Skill2}</Text>
+                    <Text style={styles.skillName}>{Skill3}</Text>
+                    <Text style={styles.skillName}>{Skill4}</Text>
+                  </View>
+                  <View style={styles.skillCol}>
+                    <Text style={styles.skillName}>{Skill5}</Text>
+                    <Text style={styles.skillName}>{Skill6}</Text>
+                  </View>
+                </View>
               </View>
             </View>
 
@@ -281,15 +319,9 @@ const Template2 = () => {
             <View style={styles.projectBlock}>
               <Text style={styles.project}>ACHIEVEMENTS</Text>
               <View style={styles.projectContainer2}>
-                <Text style={styles.achievementList}>
-                  {achievement1}
-                </Text>
-                <Text style={styles.achievementList}>
-                  {achievement2}
-                </Text>
-                <Text style={styles.achievementList}>
-                  {achievement3}
-                </Text>
+                <Text style={styles.achievementList}>{achievement1}</Text>
+                <Text style={styles.achievementList}>{achievement2}</Text>
+                <Text style={styles.achievementList}>{achievement3}</Text>
               </View>
             </View>
 
@@ -305,6 +337,17 @@ const Template2 = () => {
                     : ''}
                 </Text>
                 <Text style={styles.cgpa}>{cgpa ? `CGPA: ${cgpa}` : ''}</Text>
+              </View>
+
+              <View style={styles.projectContainer2}>
+                <Text style={styles.degree}>
+                  {stream ? `Senior Secondary (XII), ${stream}` : ''}{' '}
+                </Text>
+                <Text style={styles.clgName}>{school ? `${school}` : ''}</Text>
+                <Text style={styles.cgpa}>{board ? `(${board})` : ''}</Text>
+                <Text style={styles.date}>
+                  {completion ? `(Year of completion ${completion})` : ''}
+                </Text>
               </View>
             </View>
           </View>

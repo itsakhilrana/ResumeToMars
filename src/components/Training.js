@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
   date: {
     marginTop: '3px',
     fontFamily: 'Roboto light',
+    fontSize:10
   },
   experience: {
     marginTop: '5px',
@@ -57,7 +58,7 @@ const Training = () => {
           <Text style={styles.company}>
             {company}
           </Text>
-          {/* <Text style={styles.date}>{ startDate }</Text> */}
+          <Text style={styles.date}>{ startDate && endDate ? `(${startDate} - ${endDate})` : null }</Text>
           <Text style={styles.experience}>
             {about}
           </Text>

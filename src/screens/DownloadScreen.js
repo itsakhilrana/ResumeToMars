@@ -70,10 +70,10 @@ const DownloadScreen = ({ history }) => {
 
   return (
     <div className="DownloadScreen">
-      {/* <PDFViewer style={styles.pdfViewer}>
+      <PDFViewer style={styles.pdfViewer}>
             <MyDoc></MyDoc>
-          </PDFViewer> */}
-      <div className="Download_Info">
+          </PDFViewer>
+      {/* <div className="Download_Info">
         <img src={onmars}></img>
         <div>
           <p>Hurray! You're on Mars!</p>
@@ -96,7 +96,7 @@ const DownloadScreen = ({ history }) => {
             }
           </PDFDownloadLink>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
