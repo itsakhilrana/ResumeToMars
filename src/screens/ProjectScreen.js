@@ -5,7 +5,7 @@ import { PROJECT_DETAILS } from '../constants/resumeConstants'
 import './ProjectScreen.css'
 
 const ProjectScreen = ({ history }) => {
-  const [skills, setSkills] = useState('')
+  
   const [projectName, setprojectName] = useState('')
   const [projectDescription, setprojectDescription] = useState('')
   const [projectLink, setprojectLink] = useState('')
@@ -17,7 +17,7 @@ const ProjectScreen = ({ history }) => {
   const dispatch = useDispatch()
 
   const details = {
-    skills,
+    
     projectName,
     projectDescription,
     projectLink,
@@ -31,7 +31,7 @@ const ProjectScreen = ({ history }) => {
       ? JSON.parse(localStorage.getItem('projectDetails'))
       : {}
 
-    setSkills(projectDetails.skills)
+    
     setprojectName(projectDetails.projectName)
     setprojectDescription(projectDetails.projectDescription)
     setprojectLink(projectDetails.projectLink)
@@ -48,7 +48,7 @@ const ProjectScreen = ({ history }) => {
     localStorage.setItem('projectDetails', JSON.stringify(details))
 
     //clear all state of app here...
-    history.push('/download')
+    history.push('/skills')
   }
 
   const previousHandler = () => {
@@ -77,7 +77,7 @@ const ProjectScreen = ({ history }) => {
   return (
     <div className="ProjectScreen">
       <div className="Project_Info">
-        <p>Your Skills & Projects</p>
+        <p>Your Projects</p>
 
         <form className="Form" onSubmit={submitHandler}>
           <div className="Project_Container">
@@ -208,25 +208,6 @@ const ProjectScreen = ({ history }) => {
                       placeholder="https://"
                       onChange={(e) => setprojectLink2(e.target.value)}
                     ></input>
-                    <br></br>
-                  </div>
-                )}
-              </Spring>
-
-              <Spring
-                from={{ opacity: 0, marginLeft: -500 }}
-                to={{ opacity: 1, marginLeft: 0 }}
-              >
-                {(props) => (
-                  <div style={props}>
-                    <label>Skills</label>
-                    <input
-                      type="text"
-                      value={skills}
-                      placeholder="Java, Python, C++ & more."
-                      onChange={(e) => setSkills(e.target.value)}
-                    ></input>
-
                     <br></br>
                   </div>
                 )}

@@ -1,0 +1,64 @@
+.SkillScreen {
+    height: 585px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  
+  .Skill_Info {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .Skill_Info p {
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+    width: 200px;
+    margin-right: 160px;
+  }
+  
+  .btn_div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn_div button {
+    margin-top: 15px;
+    height: 30px;
+    width: 150px;
+    font-weight: 700;
+  
+    letter-spacing: 1px;
+  }
+  
+  @media only screen and (max-width: 414px) {
+    .SkillScreen {
+      padding-top: 0px;
+      padding-top: 0px;
+      display: inline;
+    }
+  
+    .Skill_Info {
+      padding-top: 80px;
+      display: inline-block;
+      height: 750px;
+    }
+  
+    .Skill_Info p {
+      font-size: 35px;
+      font-weight: 700;
+      color: white;
+      width: 250px;
+      margin-right: 100px;
+    }
+
+    .btn_div button {
+      margin-top: 15px;
+      height: 50px;
+      width: 150px;
+      font-weight: 700;
+    
+      letter-spacing: 1px;
+    }
+  }
+  

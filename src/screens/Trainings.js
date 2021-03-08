@@ -70,7 +70,7 @@ const Trainings = ({ history }) => {
 
     localStorage.setItem('trainingDetails', JSON.stringify(details))
 
-    history.push('/skillsnproject')
+    history.push('/project')
   }
 
   const previousHandler = () => {

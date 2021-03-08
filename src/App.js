@@ -11,6 +11,7 @@ import SchoolScreen from './screens/SchoolScreen'
 import TrainingScreen from './screens/Trainings'
 import ProjectScreen from './screens/ProjectScreen'
 import AchievementScreen from './screens/Achievement'
+import SkillScreen from './screens/SkillScreen'
 import SplashScreen from './screens/SplashScreen'
 
 import { Font } from '@react-pdf/renderer'
@@ -71,7 +72,8 @@ function App() {
                 <Route path="/download" component={DownloadScreen}></Route>
                 <Route path="/education" component={EducationScreen}></Route>
                 <Route path="/trainings" component={TrainingScreen}></Route>
-                <Route path="/skillsnproject" component={ProjectScreen}></Route>
+                <Route path="/project" component={ProjectScreen}></Route>
+                <Route path="/skills" component={SkillScreen}></Route>
                 <Route
                   path="/achievement"
                   component={AchievementScreen}
