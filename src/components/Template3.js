@@ -4,13 +4,18 @@ import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer'
 const styles = StyleSheet.create({
   Template2: {
     paddingTop: 30,
-    paddingLeft: 40,
-    paddingRight: 40,
+    paddingLeft: 50,
+    paddingRight: 50,
     paddingBottom: 45,
     backgroundColor: 'white',
     height: '100%',
     flexDirection: 'row',
     color: '#1e2126',
+  },
+
+  contactContainer:{
+    marginLeft:"80px",
+    alignItems:"flex-end"
   },
   left: {
     flexDirection: 'column',
@@ -30,11 +35,12 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   name: {
-    fontSize: 25,
-    fontFamily: 'Roboto medium',
+    fontSize: 40,
+    fontFamily: 'Roboto bold',
+    letterSpacing: 2,
   },
   userProfession: {
-    fontSize: 12,
+    fontSize: 16,
     fontFamily: 'Roboto medium',
   },
   userPunch: {
@@ -59,7 +65,7 @@ const styles = StyleSheet.create({
     // borderRadius: 5,
   },
   projectContainer: {
-    marginLeft: '25px',
+    marginLeft: '0px',
     marginTop: '15px',
   },
   projectContainer2: {
@@ -121,19 +127,23 @@ const styles = StyleSheet.create({
     marginTop: '5px',
     fontFamily: 'Roboto light',
   },
-  divider: {
-    marginRight: '25px',
-    width: '1px',
-    backgroundColor: '#A6A6A6',
-  },
-  line: {
-    height: '100%',
-    width: '1px',
-    backgroundColor: '#A6A6A6',
-    marginTop: '15px',
-  },
+  // divider: {
+  //   marginRight: '25px',
+  //   width: '1px',
+  //   backgroundColor: '#A6A6A6',
+  //   marginTop:"15px"
+  // },
+  // line: {
+  //   height: '100%',
+  //   width: '1px',
+  //   backgroundColor: '#A6A6A6',
+  //   marginTop: '15px',
+  // },
   row: {
     flexDirection: 'row',
+  },
+  col: {
+    flexDirection: 'column',
   },
   rightContainer: {
     flexDirection: 'row',
@@ -210,42 +220,52 @@ const Template3 = () => {
 
   return (
     <View style={styles.Template2}>
-      <View style={styles.left}>
-        {/* Header */}
-        <View style={styles.header}>
-          <Text style={styles.name}>{name}</Text>
-          <Text style={styles.userProfession}>{profession}</Text>
-          <Text style={styles.userPunch}>{about}</Text>
+      <View style={styles.col}>
+        <View style={styles.row}>
+          {/* Header */}
+          <View style={styles.header}>
+            <Text style={styles.name}>{name}</Text>
+            <Text style={styles.userProfession}>{profession}</Text>
+            <Text style={styles.userPunch}>{about}</Text>
+          </View>
+
+          <View style={styles.contactContainer}>
+              <Text style={styles.contactInfo}>{email}</Text>
+              <Text style={styles.contactInfo}>+91 {phoneNo}</Text>
+            </View>
         </View>
-        <Text></Text>
 
-        {/* Experience */}
-        <View style={styles.projectBlock}>
-          <Text style={styles.project}>EXPERIENCE</Text>
-          <View style={styles.row}>
-            <View style={styles.line}></View>
-            <View>
-              <View style={styles.projectContainer}>
-                <Text style={styles.projectName}>{jobtitle}</Text>
-                <Text style={styles.company}>{company}</Text>
-                <Text style={styles.date}>
-                  {startDate && endDate ? `(${startDate} - ${endDate})` : null}
-                </Text>
-                <Text style={styles.aboutProject}>{aboutJob}</Text>
-              </View>
+        <View style={styles.row}>
+          <View style={styles.left}>
+            {/* Experience */}
+            <View style={styles.projectBlock}>
+              <Text style={styles.project}>EXPERIENCE</Text>
+              <View style={styles.row}>
+                <View style={styles.line}></View>
+                <View>
+                  <View style={styles.projectContainer}>
+                    <Text style={styles.projectName}>{jobtitle}</Text>
+                    <Text style={styles.company}>{company}</Text>
+                    <Text style={styles.date}>
+                      {startDate && endDate
+                        ? `(${startDate} - ${endDate})`
+                        : null}
+                    </Text>
+                    <Text style={styles.aboutProject}>{aboutJob}</Text>
+                  </View>
 
-              <View style={styles.projectContainer}>
-                <Text style={styles.projectName}>{jobtitle2}</Text>
-                <Text style={styles.company}>{company2}</Text>
-                <Text style={styles.date}>
-                  {startDate2 && endDate2
-                    ? `(${startDate2} - ${endDate2})`
-                    : null}
-                </Text>
-                <Text style={styles.aboutProject}>{aboutJob2}</Text>
-              </View>
+                  <View style={styles.projectContainer}>
+                    <Text style={styles.projectName}>{jobtitle2}</Text>
+                    <Text style={styles.company}>{company2}</Text>
+                    <Text style={styles.date}>
+                      {startDate2 && endDate2
+                        ? `(${startDate2} - ${endDate2})`
+                        : null}
+                    </Text>
+                    <Text style={styles.aboutProject}>{aboutJob2}</Text>
+                  </View>
 
-              {/* <View style={styles.projectContainer}>
+                  {/* <View style={styles.projectContainer}>
                 <Text style={styles.projectName}>{jobtitle}</Text>
                 <Text style={styles.company}>
                   {company}
@@ -254,28 +274,32 @@ const Template3 = () => {
                   {about}
                 </Text>
               </View> */}
+                </View>
+              </View>
             </View>
-          </View>
-        </View>
 
-        {/* Projects */}
-        <View style={styles.projectBlock}>
-          <Text style={styles.project}>PROJECTS</Text>
-          <View style={styles.row}>
-            <View style={styles.line}></View>
-            <View>
-              <View style={styles.projectContainer}>
-                <Text style={styles.projectName}>{projectName}</Text>
-                <Text style={styles.date}>{projectLink}</Text>
-                <Text style={styles.aboutProject}>{projectDescription}</Text>
-              </View>
-              <View style={styles.projectContainer}>
-                <Text style={styles.projectName}>{projectName2}</Text>
-                <Text style={styles.date}>{projectLink2}</Text>
-                <Text style={styles.aboutProject}>{projectDescription2}</Text>
-              </View>
+            {/* Projects */}
+            <View style={styles.projectBlock}>
+              <Text style={styles.project}>PROJECTS</Text>
+              <View style={styles.row}>
+                <View style={styles.line}></View>
+                <View>
+                  <View style={styles.projectContainer}>
+                    <Text style={styles.projectName}>{projectName}</Text>
+                    <Text style={styles.date}>{projectLink}</Text>
+                    <Text style={styles.aboutProject}>
+                      {projectDescription}
+                    </Text>
+                  </View>
+                  <View style={styles.projectContainer}>
+                    <Text style={styles.projectName}>{projectName2}</Text>
+                    <Text style={styles.date}>{projectLink2}</Text>
+                    <Text style={styles.aboutProject}>
+                      {projectDescription2}
+                    </Text>
+                  </View>
 
-              {/* <View style={styles.projectContainer}>
+                  {/* <View style={styles.projectContainer}>
                 <Text style={styles.projectName}>SoundBee</Text>
                 <Text style={styles.aboutProject}>
                   Advance Calculator is my jrst probect, motive to kuild to
@@ -283,102 +307,98 @@ const Template3 = () => {
                   fundamentals of programming language.
                 </Text>
               </View> */}
+                </View>
+              </View>
             </View>
-          </View>
-        </View>
 
-        {/* Skills */}
+            {/* Skills */}
 
-        {/* Skills */}
-        <View style={styles.projectBlock}>
-          <Text style={styles.project}>SKILLS</Text>
-          <View style={styles.row}>
-            <View style={styles.line}></View>
-            <View>
-              <View style={styles.projectContainer}>
-                <View style={styles.skillRow}>
-                  <View style={styles.skillCol}>
-                    <Text style={styles.skillName}>{Skill1}</Text>
-                    <Text style={styles.skillName}>{Skill2}</Text>
-                  </View>
-                  <View style={styles.skillCol}>
-                    <Text style={styles.skillName}>{Skill3}</Text>
-                    <Text style={styles.skillName}>{Skill4}</Text>
-                  </View>
-                  <View style={styles.skillCol}>
-                    <Text style={styles.skillName}>{Skill5}</Text>
-                    <Text style={styles.skillName}>{Skill6}</Text>
-                  </View>
-                  <View style={styles.skillCol}>
-                    <Text style={styles.skillName}>{Skill5}</Text>
-                    <Text style={styles.skillName}>{Skill6}</Text>
+            {/* Skills */}
+            <View style={styles.projectBlock}>
+              <Text style={styles.project}>SKILLS</Text>
+              <View style={styles.row}>
+                <View style={styles.line}></View>
+                <View>
+                  <View style={styles.projectContainer}>
+                    <View style={styles.skillRow}>
+                      <View style={styles.skillCol}>
+                        <Text style={styles.skillName}>{Skill1}</Text>
+                        <Text style={styles.skillName}>{Skill2}</Text>
+                      </View>
+                      <View style={styles.skillCol}>
+                        <Text style={styles.skillName}>{Skill3}</Text>
+                        <Text style={styles.skillName}>{Skill4}</Text>
+                      </View>
+                      <View style={styles.skillCol}>
+                        <Text style={styles.skillName}>{Skill5}</Text>
+                        <Text style={styles.skillName}>{Skill6}</Text>
+                      </View>
+                      <View style={styles.skillCol}>
+                        <Text style={styles.skillName}>{Skill5}</Text>
+                        <Text style={styles.skillName}>{Skill6}</Text>
+                      </View>
+                    </View>
                   </View>
                 </View>
               </View>
             </View>
-          </View>
-        </View>
 
-        {/* <View style={styles.projectBlock}>
+            {/* <View style={styles.projectBlock}>
           <Text style={styles.project}>Skills</Text>
           <View style={styles.projectContainer}>
             <Text style={styles.projectName}>Java Python C++</Text>
           </View>
         </View> */}
-      </View>
+          </View>
 
-      {/* Right Column */}
-      <View style={styles.right}>
-        {/* Contact */}
+          {/* Right Column */}
+          <View style={styles.right}>
+            {/* Contact */}
 
-        <View style={styles.rightContainer}>
-          <View style={styles.divider}></View>
-          <View style={styles.rightBlocks}>
-            <View style={styles.projectBlock}>
-              <Text style={styles.project}>CONTACT</Text>
-              <View style={styles.projectContainer2}>
-                <Text style={styles.contactInfo}>{email}</Text>
-                <Text style={styles.contactInfo}>+91 {phoneNo}</Text>
+            <View style={styles.rightContainer}>
+              <View style={styles.divider}></View>
+              <View style={styles.rightBlocks}>
+                {/* Achievements */}
+                <View style={styles.projectBlock}>
+                  <Text style={styles.project}>ACHIEVEMENTS</Text>
+                  <View style={styles.projectContainer2}>
+                    <Text style={styles.achievementList}>{achievement1}</Text>
+                    <Text style={styles.achievementList}>{achievement2}</Text>
+                    <Text style={styles.achievementList}>{achievement3}</Text>
+                  </View>
+                </View>
+
+                {/* Education */}
+                <View style={styles.projectBlock}>
+                  <Text style={styles.project}>EDUCATION</Text>
+                  <View style={styles.projectContainer2}>
+                    <Text style={styles.degree}>{degree}</Text>
+                    <Text style={styles.clgName}>{college}</Text>
+                    <Text style={styles.date}>
+                      {educationendDate
+                        ? `(Expected graduation ${educationendDate})`
+                        : ''}
+                    </Text>
+                    <Text style={styles.cgpa}>
+                      {cgpa ? `CGPA: ${cgpa}` : ''}
+                    </Text>
+                  </View>
+
+                  <View style={styles.projectContainer2}>
+                    <Text style={styles.degree}>
+                      {stream ? `Senior Secondary (XII), ${stream}` : ''}{' '}
+                    </Text>
+                    <Text style={styles.clgName}>
+                      {school ? `${school}` : ''}
+                    </Text>
+                    <Text style={styles.cgpa}>{board ? `(${board})` : ''}</Text>
+                    <Text style={styles.date}>
+                      {completion ? `(Year of completion ${completion})` : ''}
+                    </Text>
+                  </View>
+                </View>
               </View>
             </View>
-
-             {/* Achievements */}
-             <View style={styles.projectBlock}>
-              <Text style={styles.project}>ACHIEVEMENTS</Text>
-              <View style={styles.projectContainer2}>
-                <Text style={styles.achievementList}>{achievement1}</Text>
-                <Text style={styles.achievementList}>{achievement2}</Text>
-                <Text style={styles.achievementList}>{achievement3}</Text>
-              </View>
-            </View>
-            
-            {/* Education */}
-            <View style={styles.projectBlock}>
-              <Text style={styles.project}>EDUCATION</Text>
-              <View style={styles.projectContainer2}>
-                <Text style={styles.degree}>{degree}</Text>
-                <Text style={styles.clgName}>{college}</Text>
-                <Text style={styles.date}>
-                  {educationendDate
-                    ? `(Expected graduation ${educationendDate})`
-                    : ''}
-                </Text>
-                <Text style={styles.cgpa}>{cgpa ? `CGPA: ${cgpa}` : ''}</Text>
-              </View>
-
-              <View style={styles.projectContainer2}>
-                <Text style={styles.degree}>
-                  {stream ? `Senior Secondary (XII), ${stream}` : ''}{' '}
-                </Text>
-                <Text style={styles.clgName}>{school ? `${school}` : ''}</Text>
-                <Text style={styles.cgpa}>{board ? `(${board})` : ''}</Text>
-                <Text style={styles.date}>
-                  {completion ? `(Year of completion ${completion})` : ''}
-                </Text>
-              </View>
-            </View>
-
-           
           </View>
         </View>
       </View>

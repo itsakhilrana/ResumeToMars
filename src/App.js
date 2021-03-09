@@ -16,6 +16,8 @@ import SplashScreen from './screens/SplashScreen'
 
 import { Font } from '@react-pdf/renderer'
 
+
+
 Font.register({
   family: 'Roboto light',
   src:

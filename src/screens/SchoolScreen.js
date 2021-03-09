@@ -45,7 +45,7 @@ const SchoolScreen = ({ history }) => {
     dispatch({ type: SCHOOl_DETAILS, payload: details })
     localStorage.setItem('schoolDetails', JSON.stringify(details))
 
-    if (check === 'intermidiate') {
+    if (check === 'intermidiate' || check === 'advance') {
       history.push('/achievement')
     } else {
       history.push('/trainings')

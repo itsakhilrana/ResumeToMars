@@ -75,7 +75,7 @@ const Trainings = ({ history }) => {
 
   const previousHandler = () => {
     console.log(check)
-    if (check === 'intermidiate') {
+    if (check === 'intermidiate' || check === 'advance') {
       return history.push('/achievement')
     } else {
       history.push('/school')
@@ -202,7 +202,8 @@ const Trainings = ({ history }) => {
                       </span>
                     </div>
                     <br></br>
-                    {anotherExp && anotherExp === 'intermidiate' ? (
+                    {(anotherExp && anotherExp === 'intermidiate') ||
+                    (anotherExp && anotherExp === 'advance') ? (
                       <div onClick={() => setToggle(!toggle)}>
                         {toggle ? (
                           <div
@@ -210,7 +211,7 @@ const Trainings = ({ history }) => {
                               color: 'red',
                               fontSize: '14px',
                               textAlign: 'end',
-                              position:'relative'
+                              position: 'relative',
                             }}
                           >
                             Remove Experience
@@ -221,7 +222,7 @@ const Trainings = ({ history }) => {
                               color: 'white',
                               fontSize: '14px',
                               textAlign: 'end',
-                              position:'relative'
+                              position: 'relative',
                             }}
                           >
                             Add Another Experience
