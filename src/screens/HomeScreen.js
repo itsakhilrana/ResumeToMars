@@ -4,7 +4,7 @@ import ScrollContainer from 'react-indiana-drag-scroll'
 import './HomeScreen.css'
 import basic from '../imgs/basic.svg'
 
-
+import advance from '../imgs/advance.svg'
 import intermidiate from '../imgs/intermidiate.svg'
 import fly from '../imgs/fly.svg'
 import mars from '../imgs/combo.svg'
@@ -13,12 +13,12 @@ import MobileCombo from '../imgs/MobileCombo.svg'
 const HomeScreen = () => {
   const cards = [
     {
-      cardType: 'Basic',
+      cardType: 'Beginner',
       cardRating: '4.5',
       redirect: 'basic',
       img:basic,
       cardAbout:
-        'Basic resume maintain the simple layout that will friendly with the beginner. Easily completed in couple minutes by intuitive process.',
+        'Beginner resume maintain the simple layout that will friendly with the beginner. Easily completed in couple minutes by intuitive process.',
     },
     {
       cardType: 'Intermidiate',
@@ -31,7 +31,7 @@ const HomeScreen = () => {
     {
       cardType: 'Advance',
       cardRating: '4.5',
-      img:intermidiate,
+      img:advance,
       redirect: 'advance',
       cardAbout:
         'Advance resume are for those who reached to a certain position and having couple of experience in industry. Easily completed in couple minutes by intuitive process.',

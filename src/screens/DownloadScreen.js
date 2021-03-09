@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import Body from '../components/Body'
 import Template1 from '../components/Template1'
 import Template2 from '../components/Template2'
+import Template3 from '../components/Template3'
 import { useSelector, useDispatch, Provider } from 'react-redux'
 import { RESET_DETAILS } from '../constants/resumeConstants'
 import onmars from '../imgs/onmars.svg'
@@ -46,9 +47,11 @@ const DownloadScreen = ({ history }) => {
     <Provider store={store}>
       <Document>
         <Page size="A4" style={styles.page}>
-          {/* <Template2></Template2> */}
+          {/* <Template3></Template3> */}
           {redirect === 'basic' ? (
             <Template1></Template1>
+          ) : redirect === 'advance' ? (
+            <Template3></Template3>
           ) : (
             <Template2></Template2>
           )}
@@ -64,20 +67,22 @@ const DownloadScreen = ({ history }) => {
     localStorage.removeItem('trainingDetails')
     localStorage.removeItem('projectDetails')
     localStorage.removeItem('achievementsDetails')
+   localStorage.removeItem('SkillDetails')
+
     dispatch({ type: RESET_DETAILS })
     history.push('/')
   }
 
   return (
     <div className="DownloadScreen">
-      <PDFViewer style={styles.pdfViewer}>
-            <MyDoc></MyDoc>
-          </PDFViewer>
-      {/* <div className="Download_Info">
+      {/* <PDFViewer style={styles.pdfViewer}>
+        <MyDoc></MyDoc>
+      </PDFViewer> */}
+      <div className="Download_Info">
         <img src={onmars}></img>
         <div>
           <p>Hurray! You're on Mars!</p>
-         
+
           <PDFDownloadLink
             style={{ textDecoration: 'none' }}
             document={<MyDoc />}
@@ -96,7 +101,7 @@ const DownloadScreen = ({ history }) => {
             }
           </PDFDownloadLink>
         </div>
-      </div> */}
+      </div>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer'
 
 const styles = StyleSheet.create({
   Template2: {
-    paddingTop: 45,
+    paddingTop: 30,
     paddingLeft: 40,
     paddingRight: 40,
     paddingBottom: 45,
@@ -50,6 +50,13 @@ const styles = StyleSheet.create({
   project: {
     fontSize: 12,
     fontFamily: 'Roboto medium',
+    // backgroundColor: 'black',
+    // color: 'white',
+    // paddingLeft: 10,
+    // paddingRight: 10,
+    // paddingTop: 4,
+    // paddingBottom: 4,
+    // borderRadius: 5,
   },
   projectContainer: {
     marginLeft: '25px',
@@ -73,7 +80,16 @@ const styles = StyleSheet.create({
   skillName: {
     fontSize: 12,
     marginTop: '5px',
-    
+
+    // height:"20px",
+    // backgroundColor:"black",
+    // color:"white",
+    // paddingLeft:10,
+    // paddingRight:10,
+    // paddingTop:4,
+    // paddingBottom:4,
+
+    // borderRadius:5
   },
   company: {
     fontSize: 12,
@@ -135,7 +151,7 @@ const styles = StyleSheet.create({
   },
 })
 
-const Template2 = () => {
+const Template3 = () => {
   const personalDetails = localStorage.getItem('personalDetails')
     ? JSON.parse(localStorage.getItem('personalDetails'))
     : {}
@@ -202,6 +218,45 @@ const Template2 = () => {
           <Text style={styles.userPunch}>{about}</Text>
         </View>
         <Text></Text>
+
+        {/* Experience */}
+        <View style={styles.projectBlock}>
+          <Text style={styles.project}>EXPERIENCE</Text>
+          <View style={styles.row}>
+            <View style={styles.line}></View>
+            <View>
+              <View style={styles.projectContainer}>
+                <Text style={styles.projectName}>{jobtitle}</Text>
+                <Text style={styles.company}>{company}</Text>
+                <Text style={styles.date}>
+                  {startDate && endDate ? `(${startDate} - ${endDate})` : null}
+                </Text>
+                <Text style={styles.aboutProject}>{aboutJob}</Text>
+              </View>
+
+              <View style={styles.projectContainer}>
+                <Text style={styles.projectName}>{jobtitle2}</Text>
+                <Text style={styles.company}>{company2}</Text>
+                <Text style={styles.date}>
+                  {startDate2 && endDate2
+                    ? `(${startDate2} - ${endDate2})`
+                    : null}
+                </Text>
+                <Text style={styles.aboutProject}>{aboutJob2}</Text>
+              </View>
+
+              {/* <View style={styles.projectContainer}>
+                <Text style={styles.projectName}>{jobtitle}</Text>
+                <Text style={styles.company}>
+                  {company}
+                </Text>
+                <Text style={styles.aboutProject}>
+                  {about}
+                </Text>
+              </View> */}
+            </View>
+          </View>
+        </View>
 
         {/* Projects */}
         <View style={styles.projectBlock}>
@@ -270,45 +325,6 @@ const Template2 = () => {
             <Text style={styles.projectName}>Java Python C++</Text>
           </View>
         </View> */}
-
-        {/* Experience */}
-        <View style={styles.projectBlock}>
-          <Text style={styles.project}>EXPERIENCE</Text>
-          <View style={styles.row}>
-            <View style={styles.line}></View>
-            <View>
-              <View style={styles.projectContainer}>
-                <Text style={styles.projectName}>{jobtitle}</Text>
-                <Text style={styles.company}>{company}</Text>
-                <Text style={styles.date}>
-                  {startDate && endDate ? `(${startDate} - ${endDate})` : null}
-                </Text>
-                <Text style={styles.aboutProject}>{aboutJob}</Text>
-              </View>
-
-              <View style={styles.projectContainer}>
-                <Text style={styles.projectName}>{jobtitle2}</Text>
-                <Text style={styles.company}>{company2}</Text>
-                <Text style={styles.date}>
-                  {startDate2 && endDate2
-                    ? `(${startDate2} - ${endDate2})`
-                    : null}
-                </Text>
-                <Text style={styles.aboutProject}>{aboutJob2}</Text>
-              </View>
-
-              {/* <View style={styles.projectContainer}>
-                <Text style={styles.projectName}>{jobtitle}</Text>
-                <Text style={styles.company}>
-                  {company}
-                </Text>
-                <Text style={styles.aboutProject}>
-                  {about}
-                </Text>
-              </View> */}
-            </View>
-          </View>
-        </View>
       </View>
 
       {/* Right Column */}
@@ -326,8 +342,16 @@ const Template2 = () => {
               </View>
             </View>
 
+             {/* Achievements */}
+             <View style={styles.projectBlock}>
+              <Text style={styles.project}>ACHIEVEMENTS</Text>
+              <View style={styles.projectContainer2}>
+                <Text style={styles.achievementList}>{achievement1}</Text>
+                <Text style={styles.achievementList}>{achievement2}</Text>
+                <Text style={styles.achievementList}>{achievement3}</Text>
+              </View>
+            </View>
             
-
             {/* Education */}
             <View style={styles.projectBlock}>
               <Text style={styles.project}>EDUCATION</Text>
@@ -354,18 +378,7 @@ const Template2 = () => {
               </View>
             </View>
 
-
-            {/* Achievements */}
-            <View style={styles.projectBlock}>
-              <Text style={styles.project}>ACHIEVEMENTS</Text>
-              <View style={styles.projectContainer2}>
-                <Text style={styles.achievementList}>{achievement1}</Text>
-                <Text style={styles.achievementList}>{achievement2}</Text>
-                <Text style={styles.achievementList}>{achievement3}</Text>
-              </View>
-            </View>
-
-            
+           
           </View>
         </View>
       </View>
@@ -373,4 +386,4 @@ const Template2 = () => {
   )
 }
 
-export default Template2
+export default Template3

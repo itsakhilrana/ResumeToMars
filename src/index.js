@@ -12,7 +12,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <ScrollToTop></ScrollToTop>
-      <ParticleComponent/>
+      {/* <ParticleComponent/> */}
       <App></App>
     </Router>
   </Provider>,
