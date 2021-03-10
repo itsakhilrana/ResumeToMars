@@ -306,3 +306,324 @@
   }
     
 }
+
+
+@media only screen and (max-width: 375px) {
+
+  .HomeScreen {
+    height: 100vh;
+    display: inline-block;
+    
+  }
+
+  .Intro {
+    margin-top: 0px;
+    width: 360px;
+    margin-left: 10px;
+  }
+  
+  .Punch{
+  
+    margin-top: 0px;
+  }
+
+  .Desktop_P{
+    display: none;
+  }  
+
+
+  .Mobile_P{
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    width: 360px;
+    margin-top: 0px;
+  }
+
+  .Mobile_Combo{
+    display: inline-block;
+  }
+
+  .Combo{
+    display: none;
+  }
+  
+  .Sub_P {
+    font-size: 25px;
+    font-size: 400;
+    color: #ffffff;
+    margin-top: 60px;
+    font-weight: 400;
+  }
+  
+  .Swipe_Arrow {
+    display: none;/* width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.13);
+    color: white;
+    font-weight: 500;
+    margin-top: 50px; */
+  }
+  
+  .Templates_Container {
+    margin-top: 0px;
+  }
+  
+  /* .Scrolling_Templates{
+      
+      /* overflow: hidden;
+      white-space: nowrap;
+      margin-top: 30px;
+      width: 800px; */
+  
+  .Scrolling {
+    width: 350px;
+    
+  }
+  .Scrolling_Templates {
+    overflow: auto;
+    height: 530px;
+    display: flex;
+    margin-left: 10px;
+  }
+  
+  .Template_Card {
+    width: 335px;
+    height: 550px;
+    position: relative;
+    
+    margin-left: 0px;
+    margin-right: 40px;
+    /* background-color: tomato; */
+  }
+  
+  .Template_Card img {
+    width: 335px;
+    height: 550px;
+  }
+  
+  .Template_Type {
+    position: absolute;
+    bottom: 160px;
+    left: 20px;
+    font-weight: 500;
+    color: white;
+    font-size: 20px;
+  }
+  .Rating {
+    font-size: 14px;
+  
+    font-weight: 400;
+  }
+  
+  .About_Template {
+    font-size: 14px;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 80px;
+    left: 20px;
+    color: white;
+    letter-spacing: 0.5px;
+  }
+  
+  .Template_btn {
+    position: absolute;
+    width: 200px;
+    height: 35px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+  
+    font-weight: 500;
+    bottom: 0px;
+    left: 70px;
+    top: 495px;
+  
+    font-size: 14px;
+    color: black;
+  }
+
+  .Swipe_Arrow_Mob{
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    
+    /* background-color: rgba(255, 255, 255, 0.13); */
+    color: rgba(255, 255, 255, 0.664);
+    font-weight: 500;
+    margin-top: 20px;
+    font-weight: 300;
+    font-size: 14px;
+    margin-left: 110px;
+    
+  }
+    
+}
+
+
+@media only screen and (max-width: 360px) {
+
+  .HomeScreen {
+    height: 100vh;
+    display: inline-block;
+    
+  }
+
+  .Intro {
+    margin-top: 0px;
+    width: 360px;
+    margin-left: 10px;
+  }
+  
+  .Punch{
+  
+    margin-top: 0px;
+  }
+
+  .Desktop_P{
+    display: none;
+  }  
+
+
+  .Mobile_P{
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    width: 360px;
+    margin-top: 0px;
+  }
+
+  .Mobile_Combo{
+    display: inline-block;
+  }
+
+  .Combo{
+    display: none;
+  }
+  
+  .Sub_P {
+    font-size: 25px;
+    font-size: 400;
+    color: #ffffff;
+    margin-top: 40px;
+    font-weight: 400;
+  }
+  
+  .Swipe_Arrow {
+    display: none;/* width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.13);
+    color: white;
+    font-weight: 500;
+    margin-top: 50px; */
+  }
+  
+  .Templates_Container {
+    margin-top: 0px;
+  }
+  
+  /* .Scrolling_Templates{
+      
+      /* overflow: hidden;
+      white-space: nowrap;
+      margin-top: 30px;
+      width: 800px; */
+  
+  .Scrolling {
+    width: 330px;
+    
+  }
+  .Scrolling_Templates {
+    overflow: auto;
+    height: 560px;
+    display: flex;
+    margin-left: 10px;
+  }
+  
+  .Template_Card {
+    width: 330px;
+    height: 550px;
+    position: relative;
+    
+    margin-left: 0px;
+    margin-right: 40px;
+    /* background-color: tomato; */
+  }
+  
+  .Template_Card img {
+    width: 320px;
+    height: 550px;
+  }
+  
+  .Template_Type {
+    position: absolute;
+    bottom: 160px;
+    left: 15px;
+    font-weight: 500;
+    color: white;
+    font-size: 20px;
+  }
+  .Rating {
+    font-size: 14px;
+  
+    font-weight: 400;
+  }
+  
+  .About_Template {
+    font-size: 14px;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 80px;
+    left: 15px;
+    color: white;
+    letter-spacing: 0.5px;
+  }
+  
+  .Template_btn {
+    position: absolute;
+    width: 200px;
+    height: 35px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+  
+    font-weight: 500;
+    bottom: 0px;
+    left: 60px;
+    top: 485px;
+  
+    font-size: 14px;
+    color: black;
+  }
+
+  .Swipe_Arrow_Mob{
+    display: inline-block;
+  
+    
+    /* background-color: rgba(255, 255, 255, 0.13); */
+    color: rgba(255, 255, 255, 0.664);
+    font-weight: 500;
+    margin-top:0px;
+    font-weight: 300;
+    font-size: 14px;
+    margin-left: 100px;
+    
+    
+    
+  }
+    
+}

@@ -74,4 +74,78 @@
         width: 380px;
     }
   }
+
+
+  @media only screen and (max-width: 375px) {
+    .SkillScreen {
+      padding-top: 0px;
+      padding-top: 0px;
+      display: inline;
+    }
+  
+    .Skill_Info {
+      padding-top: 80px;
+      display: inline-block;
+      height: 750px;
+    }
+  
+    .Skill_Info p {
+      font-size: 35px;
+      font-weight: 700;
+      color: white;
+      width: 250px;
+      margin-right: 100px;
+    }
+
+    .btn_div button {
+      margin-top: 15px;
+      height: 50px;
+      width: 150px;
+      font-weight: 700;
+    
+      letter-spacing: 1px;
+    }
+
+    .Skill_Container{
+        display: inline-block;
+        width: 350px;
+    }
+  }
+
+  @media only screen and (max-width: 360px) {
+    .SkillScreen {
+      padding-top: 0px;
+      padding-top: 0px;
+      display: inline;
+    }
+  
+    .Skill_Info {
+      padding-top: 80px;
+      display: inline-block;
+      height: 750px;
+    }
+  
+    .Skill_Info p {
+      font-size: 35px;
+      font-weight: 700;
+      color: white;
+      width: 250px;
+      margin-right: 100px;
+    }
+
+    .btn_div button {
+      margin-top: 15px;
+      height: 50px;
+      width: 150px;
+      font-weight: 700;
+    
+      letter-spacing: 1px;
+    }
+
+    .Skill_Container{
+        display: inline-block;
+        width: 320px;
+    }
+  }
+  
   

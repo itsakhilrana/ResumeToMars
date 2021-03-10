@@ -59,3 +59,78 @@
     }
     
   }
+
+  @media only screen and (max-width: 375px) {
+    .TrainingScreen {
+      padding-top: 0px;
+    padding-top: 0px;
+    display: inline;
+    }
+  
+    .Training_Info {
+      padding-top: 80px;
+    display: inline-block;
+    padding-bottom: 50px;
+    height: 100%;
+    }
+  
+    .Training_Info p {
+      font-size: 35px;
+      font-weight: 700;
+      color: white;
+      width: 250px;
+      margin-right: 100px;
+    }
+
+    .Training_Container{
+      display: inline-block;
+      
+    }
+    .Training2{
+      margin-left: 0px;
+    }
+
+    .wordLimit{
+      text-align: end;
+      width: 350px;
+    }
+    
+  }
+
+
+  @media only screen and (max-width: 360px) {
+    .TrainingScreen {
+      padding-top: 0px;
+    padding-top: 0px;
+    display: inline;
+    }
+  
+    .Training_Info {
+      padding-top: 80px;
+    display: inline-block;
+    padding-bottom: 50px;
+    height: 100%;
+    }
+  
+    .Training_Info p {
+      font-size: 35px;
+      font-weight: 700;
+      color: white;
+      width: 250px;
+      margin-right: 100px;
+    }
+
+    .Training_Container{
+      display: inline-block;
+      
+    }
+    .Training2{
+      margin-left: 0px;
+    }
+
+    .wordLimit{
+      text-align: end;
+      width: 340px;
+    }
+    
+  }

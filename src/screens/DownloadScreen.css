@@ -73,3 +73,41 @@
     }    
     
   }
+
+  @media only screen and (max-width: 375px) {
+
+    .DownloadScreen{
+        padding-top: 0px;
+    padding-top: 0px;
+    display: inline;
+    }
+    
+    .Download_Info{
+        padding-top: 150px;
+        display: inline-block;
+        height: 680px;
+    }
+
+    .Download_Info img{
+        height: 250px;
+    }
+    .Download_Info p{
+        font-size: 50px;
+        font-weight: 700;
+        color: white;
+       
+        
+    }
+    
+    .download_btn{
+        position: relative;
+        width: 150px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        color: black;
+    }    
+    
+  }

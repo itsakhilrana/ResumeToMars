@@ -218,3 +218,242 @@ select:focus {
   
   
 }
+
+
+@media only screen and (max-width: 375px) {
+  .EditScreen {
+    
+    padding-top: 0px;
+    padding-top: 0px;
+    display: inline;
+  }
+  .Personal_Info {
+    padding-top: 80px;
+    display: inline-block;
+    height: 800px;
+  }
+
+  .Personal_Info p {
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+    width: 250px;
+    margin-right: 0px;
+  }
+
+  .Form {
+    margin-top: 40px;
+  }
+
+
+  label {
+  
+    text-align: left;
+    display: block;
+    margin-bottom: 0px;
+  
+    color: rgba(255, 255, 255, 0.63);
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+
+  .Select {
+    position: relative;
+    color: rgb(255, 255, 255);
+    width: 350px;
+    padding: 5px 0px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.651);
+    background-color: transparent;
+  
+    letter-spacing: 1px;
+  }
+  
+  .Option {
+    color: #202327;
+  }
+  
+  .Form textarea{
+    position: relative;
+    color: rgb(255, 255, 255);
+    width: 350px;
+    height: 60px;
+    padding: 5px 5px;
+    margin-top: 15px;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgba(255, 254, 254, 0.123);
+    font-family: Roboto;
+    
+  }
+
+  .wordLimit{
+    text-align: end;
+    width: 350px;
+  }
+  
+  .Form input {
+    position: relative;
+    color: rgb(255, 255, 255);
+    width: 350px;
+    height: 50px;
+    padding: 5px 5px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgba(255, 254, 254, 0.123);
+    
+  }
+  
+  .Form button {
+    position: relative;
+    margin-top: 15px;
+    height: 50px;
+    width: 350px;
+    font-weight: 700;
+    border-radius: 20px;
+    border: none;
+    letter-spacing: 1px;
+    background-color: rgba(253, 253, 253, 0.692);
+  }
+  
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+  }
+  
+  .Form button:hover {
+    border: none;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  
+}
+
+
+@media only screen and (max-width: 375px) {
+  .EditScreen {
+    
+    padding-top: 0px;
+    padding-top: 0px;
+    display: inline;
+  }
+  .Personal_Info {
+    padding-top: 80px;
+    display: inline-block;
+    height: 800px;
+  }
+
+  .Personal_Info p {
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+    width: 250px;
+    margin-right: 0px;
+  }
+
+  .Form {
+    margin-top: 40px;
+  }
+
+
+  label {
+  
+    text-align: left;
+    display: block;
+    margin-bottom: 0px;
+  
+    color: rgba(255, 255, 255, 0.63);
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+
+  .Select {
+    position: relative;
+    color: rgb(255, 255, 255);
+    width: 340px;
+    padding: 5px 0px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.651);
+    background-color: transparent;
+  
+    letter-spacing: 1px;
+  }
+  
+  .Option {
+    color: #202327;
+  }
+  
+  .Form textarea{
+    position: relative;
+    color: rgb(255, 255, 255);
+    width: 340px;
+    height: 60px;
+    padding: 5px 5px;
+    margin-top: 15px;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgba(255, 254, 254, 0.123);
+    font-family: Roboto;
+    
+  }
+
+  .wordLimit{
+    text-align: end;
+    width: 340px;
+  }
+  
+  .Form input {
+    position: relative;
+    color: rgb(255, 255, 255);
+    width: 340px;
+    height: 50px;
+    padding: 5px 5px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgba(255, 254, 254, 0.123);
+    
+  }
+  
+  .Form button {
+    position: relative;
+    margin-top: 15px;
+    height: 50px;
+    width: 340px;
+    font-weight: 700;
+    border-radius: 20px;
+    border: none;
+    letter-spacing: 1px;
+    background-color: rgba(253, 253, 253, 0.692);
+  }
+  
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+  }
+  
+  .Form button:hover {
+    border: none;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  
+}
+
+
+

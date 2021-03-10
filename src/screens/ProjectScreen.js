@@ -136,7 +136,7 @@ const ProjectScreen = ({ history }) => {
                       placeholder="About your project..."
                       onChange={(e) => setprojectDescription(e.target.value)}
                     ></textarea>
-                    <div style={{ textAlign: 'end', width: '380px' }}>
+                    <div className="wordLimit" >
                       <span style={{ color: 'red', fontSize: '12px' }}>
                         {projectDescription
                           ? limit - projectDescription.length
@@ -204,7 +204,7 @@ const ProjectScreen = ({ history }) => {
                       placeholder="About your project..."
                       onChange={(e) => setprojectDescription2(e.target.value)}
                     ></textarea>
-                    <div style={{ textAlign: 'end', width: '380px' }}>
+                    <div className="wordLimit">
                       <span style={{ color: 'red', fontSize: '12px' }}>
                         {projectDescription2
                           ? limit - projectDescription2.length

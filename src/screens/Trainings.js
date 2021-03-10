@@ -195,7 +195,7 @@ const Trainings = ({ history }) => {
                       placeholder="Write about your experience..."
                       onChange={(e) => setAbout(e.target.value)}
                     ></textarea>
-                    <div style={{ textAlign: 'end', width: '380px' }}>
+                    <div className="wordLimit" >
                       <span style={{ color: 'red', fontSize: '12px' }}>
                         {about || about2 ? limit - about.length : limit}
                         {`/${limit}`}
@@ -322,7 +322,7 @@ const Trainings = ({ history }) => {
                           placeholder="Write about your experience..."
                           onChange={(e) => setAbout2(e.target.value)}
                         ></textarea>
-                        <div style={{ textAlign: 'end', width: '380px' }}>
+                        <div className="wordLimit" >
                           <span style={{ color: 'red', fontSize: '12px' }}>
                             {about2 ? limit - about2.length : limit}
                             {`/${limit}`}

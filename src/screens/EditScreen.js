@@ -155,7 +155,7 @@ const Edit = ({ history, location }) => {
                     setAbout(e.target.value)
                   }}
                 ></textarea>
-                <div style={{ textAlign: 'end', width: '380px' }}>
+                <div className="wordLimit" >
                   <span style={{ color: 'red', fontSize: '12px' }}>
                     {about ? limit - about.length : 90}
                     {`/${limit}`}
